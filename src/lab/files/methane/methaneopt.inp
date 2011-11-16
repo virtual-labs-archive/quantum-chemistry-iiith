@@ -1,0 +1,18 @@
+ $CONTRL RUNTYP=OPTIMIZE COORD=ZMT UNITS=ANGS $END
+ $BASIS  GBASIS=N31 NGAUSS=6 NDFUNC=1 $END
+ $DATA
+6-31g(d)/ Methane optimization
+CnV 3
+
+C
+H    1    rCH
+H    1    rCH   2    aHCH
+H    1    rCH   2    aHCH    3    d1
+H    1    rCH   2    aHCH    3    d2
+
+rCH=1.07                     
+aHCH=109.4                      
+d1=120                       
+d2=-120    
+ $END
+

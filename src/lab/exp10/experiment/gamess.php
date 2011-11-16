@@ -186,7 +186,7 @@
 					<td></td>
 					<td><div id="react">CHLOROMETHANE</div></td>
 					<td></td>
-					<td><div id="react">IODODE ION</div></td>
+					<td><div id="react">IODIDE ION</div></td>
 					</tr>
 				</table>
 		</div>
