@@ -1,0 +1,7 @@
+ $CONTRL RUNTYP=ENERGY ICHARG=-1 COORD=UNIQUE $END
+ $BASIS GBASIS=STO NGAUSS=6 $END
+ $DATA 
+STO-6G/ Chlorine single point energy
+C1
+Cl    17.0    -0.04337    -0.07996     0.00000
+ $END
