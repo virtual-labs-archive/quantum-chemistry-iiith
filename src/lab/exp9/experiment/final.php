@@ -1,4 +1,8 @@
-<?php include('config.php'); ?>
+<?php
+$jmol_path = "../../jmol";
+$browser_chk = "../../browsercheck";
+ 
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,9 +10,10 @@
 <title>Energy Calculation</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="loadXMLDoc.js"></script>
+<script src="<?php echo($jmol_path);?>/Jmol.js"></script>
 <style>
 	#container {
-		height:910px;
+		height:950px;
 		padding-left:0px;
 	}
 	#legend{
@@ -21,7 +26,7 @@
 	text-align:center;
 	padding-top:30px;
 	padding-bottom:30px;
-	padding-left:300px;
+	padding-left:100px;
 	
 	}
 	#head{
@@ -40,6 +45,8 @@
 	}
 </style>
 <script type="text/javascript">
+var view='z';
+var ang_id=0;
 function isDigit(aChar){
 	   myCharCode = aChar.charCodeAt(0);
 	   if((myCharCode > 47) && (myCharCode <  58))return true;
@@ -61,7 +68,16 @@ function isDigit(aChar){
 	ans['input13']=0.0;
 	
 	var ERR=0.00;
+function changeJmol(input){
+		var frame = document.getElementById('mol_frame');
+		ang_id=parseInt(input.name);
+		frame.src='final_bk.php?id='+input.name+'&axis='+view; 
+		document.getElementById('mol').innerHTML=-180+parseInt(input.name)*30+'<sup>0</sup>';	
+	//	document.getElementById('ttt').innerHTML=molxyz[parseInt(input.name)];
+		//jmolLoadInline(molxyz[parseInt(input.name)]);
+	}
 function changeVal(input){
+	//jmolLoadInline(molxyz[0]);
 	
 	var str = input.value;
 	var iscorr = true;
@@ -87,10 +103,18 @@ function changeVal(input){
 	//input.value=corrans;
 	input.style.backgroundColor=color;
 }
+function changeView(form){
+	if(form.view[0].checked)
+		view='z';
+	else view='y';
+	var frame = document.getElementById('mol_frame');
+	frame.src='final_bk.php?id='+ang_id+'&axis='+view; 
+}
+
 </script>
 </head>
 
-<body>
+<body onload='fetchFiles();'>
 	<script>
 		loadXMLDoc('header.html','top_part');
 		loadXMLDoc('bottom.html','bottom');
@@ -101,35 +125,67 @@ function changeVal(input){
 
 		<div id="content"><!--content starts-->
 		<br/><br/><br/>
-		<div>
-		Calculate Energies (in kcal/mol) to two decimal places only:
-		</div>
+     	<script>
+      		jmolInitialize("<?php echo($jmol_path);?>");
+      		jmolCheckBrowser("popup", "<?php echo($browser_chk);?>", "onClick");
+	    </script>
+		
+		
 		<div id="tab">
-				
-				
 		<table>
-			
-				<?php 
-				$ang=-180;for($i=0;$i<13;++$i){?>
-				<tr style='height:30px;'>
-				<td><div id='legend'><?php echo($ang);?>.0 :</div></td>
-				<td><div id='inp'><input id="input<?php echo($i+1);?>"  onKeyUp="changeVal(this)"/></div></td>
-				</tr>
-				<?php
-				 $ang+=30;
-				}?>
-			
-	
-		</table>
-		 
+			<tr>
+				<td>
+						Calculate Energies (in kcal/mol) to two decimal places only: <br /><br />
+						<table>
+								<?php 
+								$ang=-180;for($i=0;$i<13;++$i){?>
+								<tr style='height:30px;'>
+								<td><div id='legend'><?php echo($ang);?>.0 :</div></td>
+								<td>
+									<div id='inp'>
+										<input id="input<?php echo($i+1);?>"
+											name = '<?php echo($i);?>' 
+											onclick='changeJmol(this)' 
+											onkeyup="changeVal(this)"/>
+									</div>
+								</td>
+								</tr>
+								<?php
+								 $ang+=30;
+								}?>
+						</table>	
+						Note: 1 hartree = 627.509 kcal mol-1.			
+				</td>
+				<td>
+						<div id='mol' style='font-family:sans-serif;font-weight:bold;font-size:20px;'>	
+								-180<sup>0</sup>
+						</div>
+						
+						<div id="applet">
+							<iframe
+							id='mol_frame' 
+							width='365px' height=365px' src='final_bk.php'
+							scrolling="no" frameborder="0"></iframe>
+					
+						</div>
+						<form id='viewform' onclick='changeView(this)'>
+							<input type="radio" name="view" value="z" checked/> View 1
+							<input type="radio" name="view" value="y" /> View 2
+						</form> 
+				</td>
+				
+			</tr>
+		</table>						
 		</div>
-	Note: 1 hartree = 627.509 kcal mol-1.
+	
 		<br/><br/>
 		<script>
-			for(var i=1;i<=5;++i){
-			changeVal(document.getElementById('input'+i));
+			for(var i=1;i<=13;++i){
+				changeVal(document.getElementById('input'+i));
 			}
+			changeView(document.getElementById('viewform'));
 		</script>
+		<div id='ttt'></div>
 		<div id ="bottom"></div>
 		
 		<div id="footer"><!--footer starts-->
