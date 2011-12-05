@@ -68,17 +68,8 @@ function isDigit(aChar){
 	ans['input13']=0.0;
 	
 	var ERR=0.00;
-function changeJmol(input){
-		var frame = document.getElementById('mol_frame');
-		ang_id=parseInt(input.name);
-		frame.src='final_bk.php?id='+input.name+'&axis='+view; 
-		document.getElementById('mol').innerHTML=-180+parseInt(input.name)*30+'<sup>0</sup>';	
-	//	document.getElementById('ttt').innerHTML=molxyz[parseInt(input.name)];
-		//jmolLoadInline(molxyz[parseInt(input.name)]);
-	}
+
 function changeVal(input){
-	//jmolLoadInline(molxyz[0]);
-	
 	var str = input.value;
 	var iscorr = true;
 	var ctr=0;
@@ -103,14 +94,9 @@ function changeVal(input){
 	//input.value=corrans;
 	input.style.backgroundColor=color;
 }
-function changeView(form){
-	if(form.view[0].checked)
-		view='z';
-	else view='y';
-	var frame = document.getElementById('mol_frame');
-	frame.src='final_bk.php?id='+ang_id+'&axis='+view; 
-}
 
+</script>
+<script src="../../jmol/Jmol.js" type="text/javascript"></script>
 </script>
 </head>
 
@@ -118,6 +104,7 @@ function changeView(form){
 	<script>
 		loadXMLDoc('header.html','top_part');
 		loadXMLDoc('bottom.html','bottom');
+		
 	</script>
 	<div id="container"><!--container starts-->
 		<div id="top_part">
@@ -143,9 +130,15 @@ function changeView(form){
 								<td><div id='legend'><?php echo($ang);?>.0 :</div></td>
 								<td>
 									<div id='inp'>
+										<script>
+											function change(input){
+												document.getElementById('mol').innerHTML=-180+parseInt(input.name-1)*30+'<sup>0</sup>';	
+												jmolScript('load xyzfiles/'+input.name+'.xyz')
+											}
+										</script>
 										<input id="input<?php echo($i+1);?>"
-											name = '<?php echo($i);?>' 
-											onclick='changeJmol(this)' 
+											name = '<?php echo($i+1);?>' 
+											onfocus='change(this)' 
 											onkeyup="changeVal(this)"/>
 									</div>
 								</td>
@@ -162,16 +155,11 @@ function changeView(form){
 						</div>
 						
 						<div id="applet">
-							<iframe
-							id='mol_frame' 
-							width='365px' height=365px' src='final_bk.php'
-							scrolling="no" frameborder="0"></iframe>
-					
+						<script>
+							jmolApplet(350,'load xyzfiles/1.xyz');
+						</script>
 						</div>
-						<form id='viewform' onclick='changeView(this)'>
-							<input type="radio" name="view" value="z" checked/> View 1
-							<input type="radio" name="view" value="y" /> View 2
-						</form> 
+					
 				</td>
 				
 			</tr>
@@ -183,9 +171,9 @@ function changeView(form){
 			for(var i=1;i<=13;++i){
 				changeVal(document.getElementById('input'+i));
 			}
-			changeView(document.getElementById('viewform'));
+			
 		</script>
-		<div id='ttt'></div>
+	
 		<div id ="bottom"></div>
 		
 		<div id="footer"><!--footer starts-->
