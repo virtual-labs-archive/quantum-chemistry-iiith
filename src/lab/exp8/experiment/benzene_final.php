@@ -45,9 +45,9 @@ if(mol!='benzene')
 	      		    <div style='padding-left:0px;'>
 	      				<img src='images/benzene_comp.png' width='650px'; height='650px' usemap="#Map3" ></img>
 	      				<map name="Map3" id="Map3">
-	      					<area shape="rect" coords="230,0,380,170"  href="javascript:jmolScript('<?=$mode?>mo 29;')" />
-      						<area shape="rect" coords="50,120,210,300"  href="javascript:jmolScript('<?=$mode?>mo 23;')"/>
-	      					<area shape="rect" coords="390,120,540,290" href="javascript:jmolScript('<?=$mode?>mo 22;')"/>
+	      					<area shape="rect" coords="230,0,380,170"  href="javascript:jmolScript('<?=$mode?>mo 30;')" />
+      						<area shape="rect" coords="50,120,210,300"  href="javascript:jmolScript('<?=$mode?>mo 22;')"/>
+	      					<area shape="rect" coords="390,120,540,290" href="javascript:jmolScript('<?=$mode?>mo 23;')"/>
 	      					<area shape="rect" coords="50,320,210,490" href="javascript:jmolScript('<?=$mode?>mo homo;')" />
 	      					<area shape="rect" coords="370,320,520,480"  href="javascript:jmolScript('<?=$mode?>mo homo-1;')"/>
 	      					<area shape="rect" coords="200,470,360,650"  href="javascript:jmolScript('<?=$mode?>mo homo-4;')" />
@@ -60,7 +60,7 @@ if(mol!='benzene')
 	      			  <div style='padding-left:0px;'>
 					      <script type="text/javascript">
 					    	 jmolInitialize("<?php echo($jmol_path);?>");
-					    	 jmolApplet("350", "load models/benzene.smol;wireframe 0.1;spacefill off;");
+					    	 jmolApplet("350", "load models/benzene.log;wireframe 0.1;spacefill off;rotate x -40;");
 					    	
 					      </script>
 				      </div>

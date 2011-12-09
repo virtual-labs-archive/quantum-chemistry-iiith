@@ -17,6 +17,10 @@
 }
 </style>
 <style>
+	#matrix{
+		padding-left:130px;
+		
+	}
 	#matrix input{
 		width:18px;
 		height:18px;
@@ -32,7 +36,7 @@
 	}
 	
 </style>
-</head>
+
 <?php $n=3;
 
 $mol_name='';
@@ -130,6 +134,7 @@ function changeVal(input,row,col){
 	}
 }
 </script>
+</head>
 <body>
 	
 	<script>
@@ -154,7 +159,9 @@ function changeVal(input,row,col){
 					<table>
 						<?php 
 						for($i=0;$i<$n;$i++){
-							echo('<tr>');
+							?>
+							<tr>
+							<?php
 							for($j=0;$j<$n;$j++){
 								?>
 								<td style='padding:5px;'>
@@ -166,7 +173,9 @@ function changeVal(input,row,col){
 								</td>
 								<?php 
 							}
-							echo('</tr>');
+							?>
+							</tr>
+							<?php
 						}?>
 					</table>
 				</td>
@@ -195,6 +204,9 @@ function changeVal(input,row,col){
 				<div style='font-size:30px;color:black;padding-top:5px;'>
 						= 0
 				</div>
+				</td>
+				<td>
+					<img src='images/<?=$mol_name?>.png' width='450px' height='350px'></img>
 				</td>
 			</tr>
 			

@@ -7,11 +7,11 @@
 <link href="style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="loadXMLDoc.js"></script>
 <style>
-#container {
-	height: 930px;
-	padding-left: 0px;
-}
-</style>
+	#container {
+		height:910px;
+		padding-left:0px;
+	}
+	</style>
 </head>
 
 <body>
@@ -19,45 +19,34 @@
 		loadXMLDoc('header_1.html','top_part');
 		loadXMLDoc('bottom.html','bottom');
 	</script>
-	<div id="container">
-		<!--container starts-->
-		<div id="top_part"></div>
-		<!-- top_part -->
+	<div id="container"><!--container starts-->
+		<div id="top_part">
+		</div><!-- top_part -->
 
-		<div id="content">
-			<!--content starts-->
-			<br /> <br /> <br />
-			<center>
-			<?php
+		<div id="content"><!--content starts-->
+		<br/><br/><br/>
+		<center>
+		<?php
 			session_start();
 			$name = $_SESSION['name'];
 			$inp_file_name = $file_base."/".$name."/".$name."opt.inp";
-			?>
-				<h2>
-					<a href="<?php echo($inp_file_name);?>"> Generated GAMESS Input
-						file </a>
-				</h2>
+		?>
+	 	<h2> <a href="<?php echo($inp_file_name);?>"> Generated GAMESS Input file </a> </h2>
 
-				<iframe src="inp_bk.php" width="1000px" height="400px"
-					frameborder="0"></iframe>
-				<br /> <br />
-				<form action="output.php" />
-				<input type="submit" value="RUN GAMESS" />
-			</center>
-			<br /> <br />
-			<div id="bottom"></div>
-
-			<div id="footer">
-				<!--footer starts-->
-				<a href="<?php echo($developed_link);?>" target="_blank"
-					style="font-style: italic;"><?php echo($developed_txt);?> </a>
-			</div>
-			<!--footer ends-->
-
-		</div>
-		<!--content ends-->
-	</div>
-	<!--container ends-->
+		<iframe src="inp_bk.php" width="1000px" height="400px" frameborder="0"></iframe>
+		 <br/><br/>
+		 
+  		<form action="output.php" /><input type="submit" value="RUN GAMESS"/> 
+		</center>
+		<br/><br/>
+		<div id ="bottom"></div>
+		
+		<div id="footer"><!--footer starts-->
+			<a href="<?php echo($developed_link);?>" target="_blank" style="font-style: italic;"><?php echo($developed_txt);?></a>
+		</div><!--footer ends-->
+		
+	</div><!--content ends-->
+	</div><!--container ends-->
 
 </body>
 </html>

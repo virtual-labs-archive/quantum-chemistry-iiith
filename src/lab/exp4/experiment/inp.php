@@ -8,7 +8,7 @@
 <script type="text/javascript" src="loadXMLDoc.js"></script>
 <style>
 	#container {
-		height:930px;
+		height:910px;
 		padding-left:0px;
 	}
 	</style>
@@ -35,6 +35,7 @@
 
 		<iframe src="inp_bk.php" width="1000px" height="400px" frameborder="0"></iframe>
 		 <br/><br/>
+		 
   		<form action="output.php" /><input type="submit" value="RUN GAMESS"/> 
 		</center>
 		<br/><br/>

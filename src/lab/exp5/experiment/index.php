@@ -58,7 +58,7 @@ ul.thumb li img.hover {
 }
 
 ul#list-nav li a {
-	width: 175px;
+	width: 190px;
 }
 
 #main_view {

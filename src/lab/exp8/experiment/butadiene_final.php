@@ -58,7 +58,7 @@ if(mol!='butadiene')
 	      			  <div style='padding-left:50px;'>
 					      <script type="text/javascript">
 					    	 jmolInitialize("<?php echo($jmol_path);?>");
-					    	 jmolApplet("350", "load models/butadiene.smol;wireframe 0.1;spacefill off;");
+					    	 jmolApplet("350", "load models/butadiene.log;wireframe 0.1;spacefill off;");
 					    	 jmolScript('mo cutoff 0.08;mo color blue red;mo nomesh;mo fill;');
 					      </script>
 				      </div>

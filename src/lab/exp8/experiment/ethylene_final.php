@@ -37,7 +37,7 @@ if(mol!='ethylene')
 		
 		<div id="content"><!--content starts-->
 		<br/><br/><br/>
-		<?php $mode='mo cutoff 0.08;mo nomesh;mo fill;'; ?>
+		<?php $mode='mo cutoff 0.13;mo nomesh;mo fill;'; ?>
       <table>
       	<tr>
       		<td>
@@ -54,7 +54,7 @@ if(mol!='ethylene')
       			  <div style='padding-left:50px;'>
 				      <script type="text/javascript">
 				    	 jmolInitialize("<?php echo($jmol_path);?>");
-				    	 jmolApplet("350", "load models/ethylene.smol;wireframe 0.1;spacefill off;");
+				    	 jmolApplet("350", "load models/ethylene.log;wireframe 0.1;spacefill off;rotate y 30;rotate x 40;");
 				    	 jmolScript('mo cutoff 0.1;mo color blue red;mo nomesh;mo fill;');
 				      </script>
 			      </div>

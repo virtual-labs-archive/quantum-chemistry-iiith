@@ -5,7 +5,6 @@ $check=0;
  if($_GET["mol_name"])
  {
 	$name = $_GET["mol_name"];
-	
 	$flag=0;
 	
 	if($name == "water")
@@ -25,6 +24,7 @@ $check=0;
 	}
 	else
 	{
+		
 		header("Location: gamesinput.php");
 	}
 

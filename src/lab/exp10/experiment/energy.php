@@ -57,7 +57,7 @@ for(var i=1;i<=5;++i)isDone['input'+i]=false;
 
 	var ERR=0.001;
 function checkComplete(){
-	var flag =true; 
+	var flag=true; 
 	for(var i=1;i<=5;++i){
 		if(!isDone['input'+i]){
 			flag=false;
@@ -65,7 +65,6 @@ function checkComplete(){
 		}
 	}
 	var image = document.getElementById('activation');
-	
 	if(flag)image.src='images/activation_corr.png';
 	else image.src='images/activation.png';
 		 
@@ -73,6 +72,7 @@ function checkComplete(){
 function changeVal(input){
 	var str = input.value;
 	var iscorr = true;
+	if(str=='')iscorr=false;
 	var ctr=0;
 	for(var i=0;i<str.length;++i){
 		if(!(isDigit(str.charAt(i))||(str.charAt(i)=='.'))){
@@ -100,10 +100,16 @@ function changeVal(input){
 	input.style.backgroundColor=color;
 	return iscorr;
 }
+function loadPage()
+{
+	for(var i=1;i<=5;++i){
+		changeVal(document.getElementById('input'+i));
+		}
+}
 </script>
 </head>
 
-<body>
+<body onload='loadPage()'>
 	<script>
 		loadXMLDoc('header.html','top_part');
 		loadXMLDoc('bottom.html','bottom');
@@ -166,11 +172,6 @@ function changeVal(input){
 		</div>
 	
 		<br/><br/>
-		<script>
-			for(var i=1;i<=5;++i){
-			changeVal(document.getElementById('input'+i));
-			}
-		</script>
 		<div id ="bottom"></div>
 		
 		<div id="footer"><!--footer starts-->

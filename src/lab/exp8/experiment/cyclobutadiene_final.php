@@ -45,10 +45,10 @@
 		      		    <div style='padding-left:0px;'>
 		      				<img src='images/cyclobutadiene_comp.png' width='550px'; height='650px' usemap="#Map3" ></img>
 		      				<map name="Map3" id="Map3">
-		      					<area shape="rect" coords="70,10,310,170"  href="javascript:jmolScript('<?=$mode?>mo 16;')" />
+		      					<area shape="rect" coords="70,10,310,170"  href="javascript:jmolScript('<?=$mode?>mo 17;')" />
 		      					<area shape="rect" coords="80,220,270,380" href="javascript:jmolScript('<?=$mode?>mo 14;')"/>
 		      					<area shape="rect" coords="330,220,520,390" href="javascript:jmolScript('<?=$mode?>mo 15;')"/>
-		      					<area shape="rect" coords="100,480,300,650" href="javascript:jmolScript('<?=$mode?>mo 11;')" />
+		      					<area shape="rect" coords="100,480,300,650" href="javascript:jmolScript('<?=$mode?>mo 12;')" />
 		      				</map>
 		      				Click the orbital levels to view the molecular orbitals
 		      			</div>
@@ -57,7 +57,7 @@
 		      			  <div style='padding-left:50px;'>
 						      <script type="text/javascript">
 						    	 jmolInitialize("<?php echo($jmol_path);?>");
-						    	 jmolApplet("350", "load models/cyclobutadiene.smol;wireframe 0.1;spacefill off;");
+						    	 jmolApplet("350", "load models/cyclobutadiene.log;wireframe 0.1;spacefill off;rotate y 20;rotate x 40;");
 						    	 jmolScript('mo cutoff 0.08;mo color blue red;mo nomesh;mo fill;');
 						      </script>
 					      </div>

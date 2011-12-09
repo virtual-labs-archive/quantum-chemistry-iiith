@@ -1,4 +1,6 @@
-<?php include('config.php'); ?>
+<?php include('config.php');
+session_start(); 
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -25,6 +27,7 @@
 		<div id="content"><!--content starts-->
 			<center>
 				<br/><br/><br/><br/><br/><br/><br/><br/>
+			
 				<h2> Gamess Software </h2>
 			    <h4> In this experiment we use following methods and procedures </h4>
 				<table border="0">
@@ -34,7 +37,11 @@
 				</tr>
 				<tr>
 					<td align="left"> Basis set </td>
-					<th align="left"> 6-31G(d)  </th>
+					<?php if($_SESSION['name']=='c60'){?>
+						<td align="left"> AM1 </td>
+					<?php }else{?>
+					<td align="left"> 6-31G(d)  </td>
+					<?php }?>
 				</tr>
 				<tr>
 					<td align="left"> Procedure   &nbsp; &nbsp; &nbsp; </td>

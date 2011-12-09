@@ -66,7 +66,7 @@ ul#list-nav li a {
 		</div><!--content ends-->	
 		<div style="padding-left:40px">
 		<div id="footer"><!--footer starts-->
-			<a href="http://ccnsb.iiit.ac.in" target="_blank" style="font-style: italic;">Developed at CCNSB IIIT Hyderabad
+			<a href="http://ccnsb.iiit.ac.in" target="_blank" style="font-style: italic;">Developed at CCNSB IIIT Hyderabad</a>
 		</div><!--footer ends-->
 		</div>
 		</div>
@@ -75,3 +75,4 @@ ul#list-nav li a {
 	
 </body>
 
+</html>
