@@ -76,6 +76,9 @@ var mat=[	[-1,3,0],
          	[3,5,2],
          	[0,2,-4]
 		];
+function functionName(a,b,c,d) {
+	alert(a);
+}
 function multi(){
 
 	for(var i=0;i<n;++i){
@@ -97,6 +100,9 @@ function multi(){
 	jmolScript('draw arrow1 arrow {0,0,0} {'+x[0]+','+x[1]+','+x[2]+'} width 0.15 ">A";');
 	jmolScript('draw arrow2 arrow {0,0,0} {'+y[0]+','+y[1]+','+y[2]+'} width 0.15 ">B";');
 	jmolScript('color $arrow1 [0,255,255];color $arrow2 [255,0,0];');
+	//jmolScript('bind "LEFT" "_pickPoint";');
+	jmolSetCallback("pickCallback", "functionName");
+		
 	
 	
 }
@@ -208,6 +214,7 @@ function multi(){
 	                    <script type="text/javascript">
 	   						jmolApplet(400);
 	   						multi();
+	   						
   						</script>
 					</td>
 			</tr>
