@@ -9,7 +9,7 @@
 <script type="text/javascript" src="cookie.js"></script>
 <style>
 	#container {
-		height:1110px;
+		height:1160px;
 		padding-left:0px;
 	}
 	ul#list-nav li a {
@@ -50,7 +50,7 @@
 		      					<area shape="rect" coords="330,220,520,390" href="javascript:jmolScript('<?=$mode?>mo 15;')"/>
 		      					<area shape="rect" coords="100,480,300,650" href="javascript:jmolScript('<?=$mode?>mo 12;')" />
 		      				</map>
-		      				Click the orbital levels to view the molecular orbitals
+		      				<p style="color:black;font-size:16px;">Click the orbital levels to view the molecular orbitals</p>
 		      			</div>
 		      		</td>
 		      		<td>

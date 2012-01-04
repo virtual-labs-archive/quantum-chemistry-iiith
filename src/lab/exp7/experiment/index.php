@@ -2,14 +2,14 @@
 $n=2;
 $X=array(1,1);
 $m1 = array(
-			array(2,1),
-			array(1,2),
+			array(1.5,1.0),
+			array(1.0,1.5),
 			); 
 $e1 = array(
 			array(-0.71, 0.71),
 			array( 0.71, 0.71),
 			);
-$EV=array(3,1);
+$EV=array(0.5,2.5);
 
 ?>
 <?php include('config.php'); ?>
@@ -23,7 +23,7 @@ $EV=array(3,1);
   <script src="../../jmol/Jmol.js" type="text/javascript"></script> <!-- REQUIRED -->
 <style>
 	#container {
-		height:950px;
+		height:1040px;
 		padding-left:0px;
 	}
 	ul#list-nav li a {
@@ -32,7 +32,7 @@ $EV=array(3,1);
     #matrix{
     	font-size:20px;
     	color:black;
-    	text-align:right;
+    	text-align:center;
     	padding-left:100px;
     	padding-top:30px;
     }
@@ -153,6 +153,11 @@ $EV=array(3,1);
 			</td>
 			<td style="padding-left:40px;">
 				<applet code="ShapeMover.class" width=500 height=400></applet>
+				<p style="font-size:16px;">Click on the applet to select the vector <b>P</b>. 
+				<b>Op1</b> and <b>Op2</b> are projections on eigenvectors <b>V1</b> and <b>V2</b> respectively. 
+				Similarly, <b>Q</b> is the resultant vector and <br/><b>Oq1</b> and <b>Oq2</b> are projections on 
+				eigenvectors <b>V1</b> and <b>V2</b> respectively. </p>
+				
 			</td>
 		</tr>
 		</table>
@@ -163,6 +168,7 @@ $EV=array(3,1);
 		
 		var V = new Array(-1,-1);
 		var cv = new Array(<?=$EV[0]?>,<?=$EV[1]?>);
+		
 		function changeVal(inp,t){
 			var str=inp.value;
 			var cval = cv[t];
@@ -177,17 +183,18 @@ $EV=array(3,1);
 			inp.style.backgroundColor=color;
 			if(V[0]==cv[0] &&V[1]==cv[1]){
 				alert("Correct Answer");
-				window.location("eigen2.php");
+				window.location="eigen2.php";
 			}
 		}
 		</script>
 			if <b>P</b> = c<sub>1</sub><b>V<sub>1</sub></b> + c<sub>2</sub><b>V<sub>2</sub></b> <br/>
 			then <b>Q</b>=<b>M P</b> <br/><br/>
-			<b>Q </b>= <input id="v1" maxlength=3 onkeyup='changeVal(this,0)';></input> 
-			c<sub>1</sub><b>V<sub>1</sub></b> + <input id="v1" maxlength=2 onkeyup='changeVal(this,1)';></input> 
+			Quiz: &nbsp;<b>Q </b>= <input id="v0" maxlength=3 onkeyup='changeVal(this,0)';></input> 
+			c<sub>1</sub><b>V<sub>1</sub></b> + <input id="v1" maxlength=3 onkeyup='changeVal(this,1)';></input> 
 			c<sub>2</sub><b>V<sub>2</sub></b> <br/>
 		</div>
 		<br/><br/>
+	
 		<div id ="bottom"></div>
 		
 		<div id="footer"><!--footer starts-->

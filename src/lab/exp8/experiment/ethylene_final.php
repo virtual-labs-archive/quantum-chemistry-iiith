@@ -47,7 +47,7 @@ if(mol!='ethylene')
       					<area shape="rect" coords="70,70,370,230" href="javascript:jmolScript('<?=$mode?>mo lumo;')"/>
       					<area shape="rect" coords="70,270,390,430"  href="javascript:jmolScript('<?=$mode?>mo homo;')"/>
       				</map>
-      				Click the orbital levels to view the molecular orbitals
+      				<p style="color:black;font-size:16px;">Click the orbital levels to view the molecular orbitals</p>
       			</div>
       		</td>
       		<td>

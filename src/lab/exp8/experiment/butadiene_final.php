@@ -10,7 +10,7 @@
 
 <style>
 	#container {
-		height:1110px;
+		height:1160px;
 		padding-left:0px;
 	}
 	ul#list-nav li a {
@@ -51,7 +51,7 @@ if(mol!='butadiene')
 	      					<area shape="rect" coords="100,320,440,470" href="javascript:jmolScript('<?=$mode?>mo homo;')"/>
 	      					<area shape="rect" coords="100,480,440,640"  href="javascript:jmolScript('<?=$mode?>mo homo-1;')"/>
 	      				</map>
-	      				Click the orbital levels to view the molecular orbitals
+	      				<p style="color:black;font-size:16px;">Click the orbital levels to view the molecular orbitals</p>
 	      			</div>
 	      		</td>
 	      		<td>
