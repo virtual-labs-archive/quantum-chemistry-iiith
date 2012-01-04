@@ -9,7 +9,7 @@
 <script type="text/javascript" src="cookie.js"></script>
 <style>
 	#container {
-		height:920px;
+		height:950px;
 		padding-left:0px;
 	}
 	ul#list-nav li a {
@@ -33,6 +33,12 @@
 	}
 	#row{
 	padding-top:5px;
+	}
+	#expheader{
+		padding-top:30px;
+		padding-left:100px;
+		color:black;
+		font-size:18px;	
 	}
 	
 </style>
@@ -134,6 +140,8 @@ function changeVal(input,row,col){
 	}
 }
 </script>
+
+
 </head>
 <body>
 	
@@ -147,7 +155,24 @@ function changeVal(input,row,col){
 		
 		<div id="content"><!--content starts-->
 		<br/><br/><br/>
-		
+		<div id="expheader">
+		Note the structure of the selected molecule shown below has carbon atoms numbered(C1,C2...) <br/>
+		Fill the elements of the secular matrix <br/>
+			<div>
+				<ul>
+					<li>
+					<table>
+					<tr>
+					<td>use</td>
+					<td><img src="images/x_.png"></img></td>
+					<td><a href="#">see in main theory.</a> </td>
+					</tr>
+					</table>
+					</li>
+					<li>Each element van be either 'x', '1' or '0' .<br/></li>
+				</ul>				
+			</div> 
+		</div>
 		<div id='matrix'>
 		
 			<table border='0'>

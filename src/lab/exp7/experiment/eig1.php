@@ -7,7 +7,7 @@
   </head>
 
   <body>
-      <applet code="ShapeMover.class" width=400 height=300>
+      <applet code="ShapeMover.class" width=500 height=400>
       </applet>
 
   <script language="JavaScript" src="/js/omi/jsc/s_code_remote.js"></script></body>
