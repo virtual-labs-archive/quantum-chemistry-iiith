@@ -156,7 +156,7 @@ $EV=array(0.5,2.5);
 				<applet code="eigen3.class" width=500 height=400></applet>
 				<br/>
 				<p style="font-size:16px;">
-				Select a point <b>P</b> on the circle by clicking on the applet. Notice, that the resultant vector<b>Q</b> 
+				Select a point <b>P</b> on the circle by clicking on the applet. Notice, that the resultant vector <b>Q</b> 
 				lies on the ellipse.The values in the bracket shows the distance of vector from the origin. The color of 
 				the point <b>Q</b> is given according to the distance from the origin. (See the colormap).<br/>
 				Use 'C' to remove the vectors and it's projections.
