@@ -77,7 +77,7 @@ Input file:<br><br>
 <li>UNITS: distance units can be specified as ANGS or BOHR. Angles must be in degrees.</li><br>
 </ol>
 
-<li>$SYSTEM: This group provides global control information for your computer’s operation. This is system related input, and will not seem particularly chemical to the users.</li><br>
+<li>$SYSTEM: This group provides global control information for your computerï¿½s operation. This is system related input, and will not seem particularly chemical to the users.</li><br>
 <ol>
 <li>TIMLIM: time limit, in minutes. It is set to about 95 percent of the time limit given to the batch job so that GAMESS can stop itself gently.</li><br>
 
@@ -153,10 +153,41 @@ Repeat the above steps for every molecule in the list.<br><br>
 <!-- <li><a href="http://pascal.iiit.ac.in/ccnsb/qchem/qm-freq/vibration.html">Click here to start the experiment</a></li> -->
 <a href="experiment/index.php" target="_blank"> Experiment  </a>
 </div>
-
+<script>
+	var len=6;
+	var Ans = new Array();
+	Ans["q1"]=0;
+	Ans["q2"]=0;
+	Ans["q3"]=0;
+	Ans["q4"]=0;
+	Ans["q5"]=0;
+	Ans["q6"]=0;
+	function checkAns(form)
+	{
+		wrong="";
+		for(i=1;i<=len;++i)
+		{
+			var ll = form["q"+i].length;
+			var sel=-1;
+			for(j=0;j<ll;++j)
+			{
+				if(form["q"+i][j].checked)
+					sel=j;
+			}
+			//if(i==5)alert(Ans["q"+i]!=parseInt(sel));
+			if(Ans["q"+i]!=parseInt(sel))
+				wrong+="Q"+i+","
+		}
+		if(wrong!="")
+			alert(wrong +"  are wrong");
+		else 
+			alert("all ans are correct.")
+			
+	}
+</script>
 <div id="quiz">
 
-
+<form name="qz" onsubmit="checkAns(this);">
 <h2>Quiz</h2>
 <p> <b>Q1.</b> A minimal valence basis set is the one in which<br>
 <input name="q1" id="q1" value="3" type="radio"> <font color="black">
@@ -224,6 +255,7 @@ None of the above </font> <br>
 3n </font> <br>
 <br>
 <input value="Submit Answers" type="submit"> </p>
+</form>
 </div>
 
 <div id="references"><br>
@@ -236,12 +268,9 @@ None of the above </font> <br>
 </ol>
 </div>
 
-
 <div id="feedback">
-      <h2>
-               <a href="http://virtual-labs.ac.in/feedback/" target="_blank">Feedback</a>
-                  </h2>
-               </div>
-
-
+   <h2>
+      <a href="http://virtual-labs.ac.in/feedback/" target="_blank">Feedback</a>
+   </h2>
+</div>
 </body></html>

@@ -79,7 +79,7 @@ Input file:<br><br>
 <li>UNITS: distance units can be specified as ANGS or BOHR. Angles must be in degrees.</li><br>
 </ol>
 
-<li>$SYSTEM: This group provides global control information for your computer’s operation. This is system related input, and will not seem particularly chemical to the users.</li><br>
+<li>$SYSTEM: This group provides global control information for your computerï¿½s operation. This is system related input, and will not seem particularly chemical to the users.</li><br>
 <ol>
 <li>TIMLIM: time limit, in minutes. It is set to about 95 percent of the time limit given to the batch job so that GAMESS can stop itself gently.</li><br>
 
@@ -152,77 +152,109 @@ Repeat the above steps for every molecule in the list.<br><br>
 <h2>Experiment</h2>
 <a href="experiment/index.php" target="_blank">  Experiment  </a> 
 </div>
-
+<script>
+	var len=6;
+	var Ans = new Array();
+	Ans["q1"]=0;
+	Ans["q2"]=0;
+	Ans["q3"]=0;
+	Ans["q4"]=0;
+	Ans["q5"]=0;
+	Ans["q6"]=0;
+	
+	function checkAns(form)
+	{
+		wrong="";
+		for(i=1;i<=len;++i)
+		{
+			var ll = form["q"+i].length;
+			var sel=-1;
+			for(j=0;j<ll;++j)
+			{
+				if(form["q"+i][j].checked)
+					sel=j;
+			}
+			//if(i==5)alert(Ans["q"+i]!=parseInt(sel));
+			if(Ans["q"+i]!=parseInt(sel))
+				wrong+="Q"+i+","
+		}
+		if(wrong!="")
+			alert(wrong +"  are wrong");
+		else 
+			alert("all ans are correct.")
+			
+	}
+</script>
 <div id="quiz">
-
-
+<form name="qz" onsubmit="checkAns(this);">
 <h2>Quiz</h2>
-<p> <b>Q1.</b> A minimal valence basis set is the one in which<br>
-<input name="q1" id="q1" value="3" type="radio"> <font color="black">
-Always gives lower energy </font> <br>
-<input name="q1" id="q1" value="2" type="radio"><font color="black">
-Is optimized for small molecules </font> <br>
-<input name="q1" id="q1" value="1" type="radio"> <font color="black">
-Contains one basis function for each atomic orbital </font> <br>
-<input name="q1" id="q1" value="0" type="radio"><font color="black">
-None of the above </font> <br>
-<br>
-
-<b>Q2.</b> Which of the following basis sets do not have the polarization functions<br>
-<input name="q2" id="q2" value="3" type="radio"> <font color="black">
-6-31G* </font> <br>
-<input name="q2" id="q2" value="2" type="radio"><font color="black">
-6-31G(d) </font> <br>
-<input name="q2" id="q2" value="1" type="radio"> <font color="black">
-3-21G </font> <br>
-<input name="q2" id="q2" value="0" type="radio"><font color="black">
-None of the above </font> <br>
-<br>
-
-<b>Q3.</b>In the context of quantum chemistry , UHF stands for <br>
-<input name="q3" id="q3" value="3" type="radio"> <font color="black">
-Ultra High Frequency </font> <br>
-<input name="q3" id="q3" value="2" type="radio"><font color="black">
-Unrestricted Hatree Fock </font> <br>
-<input name="q3" id="q3" value="1" type="radio"> <font color="black">
-Under Half Full </font> <br>
-<input name="q3" id="q3" value="0" type="radio"><font color="black">
-Unlimited Hamiltonian function </font> <br>
-<br>
-
-<b>Q4.</b> What do MP2 and B3LYP levels have in common <br>
-<input name="q4" id="q4" value="3" type="radio"> <font color="black">
-They are all post-Hartree-Fock techniques </font> <br>
-<input name="q4" id="q4" value="2" type="radio"><font color="black">
-They are all size-extensive techniques </font> <br>
-<input name="q4" id="q4" value="1" type="radio"> <font color="black">
-They are all techniques which include electron correlation </font> <br>
-<input name="q4" id="q4" value="0" type="radio"><font color="black">
-They are all based on density functional theory </font> <br>
-<br>
-
-<b>Q5.</b> The transition state can be characterised by <br>
-<input name="q5" id="q5" value="3" type="radio"> <font color="black">
-One imaginary frequency </font> <br>
-<input name="q5" id="q5" value="2" type="radio"><font color="black">
-All positive frequencies </font> <br>
-<input name="q5" id="q5" value="1" type="radio"> <font color="black">
-All negative frequencies </font> <br>
-<input name="q5" id="q5" value="0" type="radio"><font color="black">
-None of the above </font> <br>
-<br>
-
-<b>Q6.</b> The number of normal modes for a non-linear molecule of 'n' atoms is <br>
-<input name="q6" id="q6" value="3" type="radio"> <font color="black">
-3n-4 </font> <br>
-<input name="q6" id="q6" value="2" type="radio"><font color="black">
-3n-5 </font> <br>
-<input name="q6" id="q6" value="1" type="radio"> <font color="black">
-3n-6 </font> <br>
-<input name="q6" id="q6" value="0" type="radio"><font color="black">
-3n </font> <br>
-<br>
-<input value="Submit Answers" type="submit"> </p>
+	<p> <b>Q1.</b> A minimal valence basis set is the one in which<br>
+	<input name="q1" id="q1" value="3" type="radio"> <font color="black">
+	Always gives lower energy </font> <br>
+	<input name="q1" id="q1" value="2" type="radio"><font color="black">
+	Is optimized for small molecules </font> <br>
+	<input name="q1" id="q1" value="1" type="radio"> <font color="black">
+	Contains one basis function for each atomic orbital </font> <br>
+	<input name="q1" id="q1" value="0" type="radio"><font color="black">
+	None of the above </font> <br>
+	<br>
+	
+	<b>Q2.</b> Which of the following basis sets do not have the polarization functions<br>
+	<input name="q2" id="q2" value="3" type="radio"> <font color="black">
+	6-31G* </font> <br>
+	<input name="q2" id="q2" value="2" type="radio"><font color="black">
+	6-31G(d) </font> <br>
+	<input name="q2" id="q2" value="1" type="radio"> <font color="black">
+	3-21G </font> <br>
+	<input name="q2" id="q2" value="0" type="radio"><font color="black">
+	None of the above </font> <br>
+	<br>
+	
+	<b>Q3.</b>In the context of quantum chemistry , UHF stands for <br>
+	<input name="q3" id="q3" value="3" type="radio"> <font color="black">
+	Ultra High Frequency </font> <br>
+	<input name="q3" id="q3" value="2" type="radio"><font color="black">
+	Unrestricted Hatree Fock </font> <br>
+	<input name="q3" id="q3" value="1" type="radio"> <font color="black">
+	Under Half Full </font> <br>
+	<input name="q3" id="q3" value="0" type="radio"><font color="black">
+	Unlimited Hamiltonian function </font> <br>
+	<br>
+	
+	<b>Q4.</b> What do MP2 and B3LYP levels have in common <br>
+	<input name="q4" id="q4" value="3" type="radio"> <font color="black">
+	They are all post-Hartree-Fock techniques </font> <br>
+	<input name="q4" id="q4" value="2" type="radio"><font color="black">
+	They are all size-extensive techniques </font> <br>
+	<input name="q4" id="q4" value="1" type="radio"> <font color="black">
+	They are all techniques which include electron correlation </font> <br>
+	<input name="q4" id="q4" value="0" type="radio"><font color="black">
+	They are all based on density functional theory </font> <br>
+	<br>
+	
+	<b>Q5.</b> The transition state can be characterised by <br>
+	<input name="q5" id="q5" value="3" type="radio"> <font color="black">
+	One imaginary frequency </font> <br>
+	<input name="q5" id="q5" value="2" type="radio"><font color="black">
+	All positive frequencies </font> <br>
+	<input name="q5" id="q5" value="1" type="radio"> <font color="black">
+	All negative frequencies </font> <br>
+	<input name="q5" id="q5" value="0" type="radio"><font color="black">
+	None of the above </font> <br>
+	<br>
+	
+	<b>Q6.</b> The number of normal modes for a non-linear molecule of 'n' atoms is <br>
+	<input name="q6" id="q6" value="3" type="radio"> <font color="black">
+	3n-4 </font> <br>
+	<input name="q6" id="q6" value="2" type="radio"><font color="black">
+	3n-5 </font> <br>
+	<input name="q6" id="q6" value="1" type="radio"> <font color="black">
+	3n-6 </font> <br>
+	<input name="q6" id="q6" value="0" type="radio"><font color="black">
+	3n </font> <br>
+	<br>
+	<input value="Submit Answers" type="submit"> </p>
+	</form>
 </div>
 
 <div id="references"><br>
@@ -235,11 +267,10 @@ None of the above </font> <br>
 </ol>
 </div>
 
+
 <div id="feedback">
-      <h2>
-               <a href="http://virtual-labs.ac.in/feedback/" target="_blank">Feedback</a>
-                  </h2>
-               </div>
-
-
+   <h2>
+      <a href="http://virtual-labs.ac.in/feedback/" target="_blank">Feedback</a>
+   </h2>
+</div>
 </body></html>

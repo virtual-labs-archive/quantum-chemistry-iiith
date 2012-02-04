@@ -123,33 +123,65 @@ of inertia equation, we get the bond length.
 <a href="experiment/index.php"  target="_blank"> Click here to start the experiment  </a>
 
 </div>
-
+<script>
+	var len=5;
+	var Ans = new Array();
+	Ans["q1"]=0;
+	Ans["q2"]=0;
+	Ans["q3"]=0;
+	Ans["q4"]=0;
+	Ans["q5"]=0;
+	
+	function checkAns(form)
+	{
+		wrong="";
+		for(i=1;i<=len;++i)
+		{
+			var ll = form["q"+i].length;
+			var sel=-1;
+			for(j=0;j<ll;++j)
+			{
+				if(form["q"+i][j].checked)
+					sel=j;
+			}
+			//if(i==5)alert(Ans["q"+i]!=parseInt(sel));
+			if(Ans["q"+i]!=parseInt(sel))
+				wrong+="Q"+i+","
+		}
+		if(wrong!="")
+			alert(wrong +"  are wrong");
+		else 
+			alert("all ans are correct.")
+			
+	}
+</script>
 <div id="quiz">
 <h2>Quiz</h2>
 <p>
+ <form name="qz" onsubmit="checkAns(this);">
 <ol>
     <li> Which of the following molecule does NOT exhibit infrared spectra  <br>
-        <input type="radio" name="q5" id="q5" value="1"> <font color="green"> HCl</font> <br>
-        <input type="radio" name="q5" id="q5"value="2"><font color="red"> CO </font> <br> 
-        <input type="radio" name="q5" id="q5"value="3"><font color="black"> N<sub>2</sub> </font> <br> 
-        <input type="radio" name="q5" id="q5"value="4"><font color="blue"> HBr </font> 
+        <input type="radio" name="q1" id="q1" value="1"> <font color="green"> HCl</font> <br>
+        <input type="radio" name="q1" id="q1"value="2"><font color="red"> CO </font> <br> 
+        <input type="radio" name="q1" id="q1"value="3"><font color="black"> N<sub>2</sub> </font> <br> 
+        <input type="radio" name="q1" id="q1"value="4"><font color="blue"> HBr </font> 
         <br><br> 
      </li>
     <li>Formula for calculating reduced mass of two atoms (of mass \(m_1\) and \(m_2\)) is:  <br>
-        <input type="radio" name="q5" id="q5" value="1"> <font color="green"> \(m_1+m_2 \) </font> <br>
-        <input type="radio" name="q5" id="q5"value="2"><font color="red">     \(\frac{1}{m_1} +\frac{1}{m_2}\) </font> <br><br>
-        <input type="radio" name="q5" id="q5"value="3"><font color="black"> \(\sqrt{m_1 m_2}\)</font> <br><br>
-        <input type="radio" name="q5" id="q5"value="4"><font color="blue"> \( \frac{1}{\frac{1}{m_1} +\frac{1}{m_2}}\) </font> <br><br>
+        <input type="radio" name="q2" id="q2" value="1"> <font color="green"> \(m_1+m_2 \) </font> <br>
+        <input type="radio" name="q2" id="q2"value="2"><font color="red">     \(\frac{1}{m_1} +\frac{1}{m_2}\) </font> <br><br>
+        <input type="radio" name="q2" id="q2"value="3"><font color="black"> \(\sqrt{m_1 m_2}\)</font> <br><br>
+        <input type="radio" name="q2" id="q2"value="4"><font color="blue"> \( \frac{1}{\frac{1}{m_1} +\frac{1}{m_2}}\) </font> <br><br>
      </li>
      <li> Which one of the following molecular activity results in Infrared and Microwave spectra respectively: <br>
-        <input type="radio" name="q5" id="q5" value="1"> <font color="green"> Rotation & Vibration</font> <br>
-        <input type="radio" name="q5" id="q5" value="2"><font color="red"> Vibration & Rotation </font> <br> 
-        <input type="radio" name="q5" id="q5" value="3"><font color="black"> Ionization & Rotation </font> <br> 
-        <input type="radio" name="q5" id="q5" value="4"><font color="blue"> Vibration & Ionization </font> 
+        <input type="radio" name="q3" id="q3" value="1"> <font color="green"> Rotation & Vibration</font> <br>
+        <input type="radio" name="q3" id="q3" value="2"><font color="red"> Vibration & Rotation </font> <br> 
+        <input type="radio" name="q3" id="q3" value="3"><font color="black"> Ionization & Rotation </font> <br> 
+        <input type="radio" name="q3" id="q3" value="4"><font color="blue"> Vibration & Ionization </font> 
      </li>
      <li> Vibrational energies are large compared to rotational energies: <br>
-         <input type="radio" name="q5" id="q5" value="1"><font color="green"> True </font> <br>
-         <input type="radio" name="q5" id="q5" value="0"><font color="blue"> False</font> <br>
+         <input type="radio" name="q4" id="q4" value="1"><font color="green"> True </font> <br>
+         <input type="radio" name="q4" id="q4" value="0"><font color="blue"> False</font> <br>
      </li>
      <li> \(\Delta J = +1\) corresponds to P branch. <br>
          <input type="radio" name="q5" id="q5" value="1"><font color="green"> True </font> <br>
@@ -158,15 +190,15 @@ of inertia equation, we get the bond length.
 
 </ol>
         <input type="submit" value="Submit Answers">
+        </form>
         </p>
 
 
      </div>
 
 
-     <div id="feedback">
-           <h2>
-                    <a href="http://virtual-labs.ac.in/feedback/" target="_blank">Feedback</a>
-                       </h2>
-                    </div>
-
+<div id="feedback">
+   <h2>
+      <a href="http://virtual-labs.ac.in/feedback/" target="_blank">Feedback</a>
+   </h2>
+</div>

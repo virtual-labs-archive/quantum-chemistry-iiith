@@ -11,7 +11,7 @@ operations on them.
 
 <p> <br>
 General Motivation: The wave function of a state of the system is typically represented by a vector 
-( for the coefficients) on a basis. The Operators are naturally represented 
+( for the coeffecients) on a basis. The Operators are naturally represened 
 as matrices over this basis. Since all properties are expectation values of the a particular
 operators, we see that we are required to multiply a vector with a matrix. Thus understanding
 matrix operations (on a vector, in particular) becomes paramount for understanding 
@@ -30,12 +30,12 @@ known, and a solution for vector \( \vec x \) has to be found. Also, the Schrodi
 <div id="theory">
 <h2>Theory</h2>
 
- Please see the theory section of the  Molecular Orbital theory, as an example of
-how analysis of linear systems and an eigen system is solved to obtain the electronic structure
+ Please see the theory section of the Huckel Molecular Orbital theory, as an example of
+how analyis of linear systems and an eigen system is solved to obtain the electronic structure
 of the molecule/s.
 
 <p><br> A system of linear equations of the type:
-$$ \sum_{j=1}^{N}~ c_{ij} x_j = b x_i, ~for~each~i = 1, 2, \cdots,N$$
+$$ \sum_{j=1}^{N}~ c_{ij} x_j = b x_j, ~for~each~i = 1, 2, \cdots,N$$
 can be written in matrix formulation as:
 $$ {\bf C } {\vec x} = b {\vec x}$$
 where matrix \( {\bf C}\) has elements \(c_{ij}\) is the only known quantity in the equation; both  and \(b\) (which is a is scalar constant) and the vector \(\vec x\) are to be determined. The left hand side of the equation, \( {\bf C} \vec x\) can be thought of as an operation 
@@ -47,22 +47,14 @@ where \(\bf I\) is the Identity matrix. Consider the case where a product of two
 quantities equals zero; this would imply that either one or both of the scalars are zero. 
 Similarly, for the case were \( {\bf M } \vec x =0 \), if we ignore the trivial solution 
 \( \vec x =0\), the requirement is that the determinant of \( {\bf M}\) equal zero; i.e. 
-$$ {\bf det~M} = {\bf det} ( {\bf C} -b {\bf I})= 0$$
+$$ {\bf det M} = {\bf det} ( {\bf C} -b {\bf I})= 0$$
 where the only unknown quantity is \(b\). This determinant  is a \(N\)-th order polynomial 
-in \(b\), and will have \(N\) solutions for \(b\). Each solution \(b_i\) there exists a vector
-\( \vec v_i\), called eigen vector,  that satisfies the linear equation 
-\(({\bf C } - b  {\bf I} ) \vec v_i = 0\). Note that by convention, the eigen vector is choosen
-to be a unit vector, i.e., \( \vec v_i \cdot \vec v_i = 1\).
+in \(b\), and will have \(N\) solutions for \(b\). 
 
-<p><br>When the matrix \(\bf C\) is symmetric, we are assured that (Ref: Kreyzig, Chapter 7)
-<ol>
- <li> the  eigen values \(\lambda_i\) satisfiying the eigen system 
-   \({\bf det} ( {\bf C} -\lambda_i {\bf I})= 0\) are always real. Lets denote  \(\vec v_i\) the eigen vector of this eigen value, \( \lambda_i\).
-  <li> The set of eigen vectors are orthogonal, i.e. the two different eigen vectors are perpendicular to each other, mathematically this means: \( \vec v_i \cdot \vec v_j = \delta_{i,j}\), where \( \delta_{i,j} \) is the Kroneker delta, which is defined to be 1 when \( i = j\) and 0 otherwise. 
-</ol>
- 
+<p><br>When the matrix \(\bf C\) is symmetric, we are assured that the roots of the 
+equation \({\bf det} ( {\bf C} -b {\bf I})= 0\) are always real.
 
-<p><br> In the rest of the experiment, we will explore the properties of eigen values and eigen vectors.
+
 </div>
 
 
@@ -81,74 +73,24 @@ In the applet to the right, you will be selecting vector \(P\) and notice the ve
 <h2>Experiment</h2>
 <a href="experiment/index.php" target="_blank"> Experiment  </a>
 </div>
-<script>
-	var len=2;
-	var Ans = new Array();
-	Ans["q1"]=0;
-	Ans["q2"]=0;
-	
-	function checkAns(form)
-	{
-		wrong="";
-		for(i=1;i<=len;++i)
-		{
-			var ll = form["q"+i].length;
-			var sel=-1;
-			for(j=0;j<ll;++j)
-			{
-				if(form["q"+i][j].checked)
-					sel=j;
-			}
-			//if(i==5)alert(Ans["q"+i]!=parseInt(sel));
-			if(Ans["q"+i]!=parseInt(sel))
-				wrong+="Q"+i+","
-		}
-		if(wrong!="")
-			alert(wrong +"  are wrong");
-		else 
-			alert("all ans are correct.")
-			
-	}
-</script>
+
 <div id="quiz">
 <h2>Quiz</h2>
- <form name="qz" onsubmit="checkAns(this);">
+
 <p>
-Let \(\{\lambda_i, i =1,N\}\) and \(\{\vec v_i, i = 1,N\}\) denote the set of eigen values 
-and the corresponding set of eigen vectors for the matrix \({\bf M}\).  
- For a randomly selected input vector \(P\), let the resultant 
-vector be \(Q= MP\).  
-<p><br>Answer following questions for this eigen system.
-<br>
-<br><b>Q1.</b> All but one of the eigen values are zero. If the input vector 
-\(P\) is a point in \(N\)-dimensional space selected at random, the \(\vec Q\) will be  
-<br>
+<b>Q1.</b> A minimal valence basis set is the one in which<br>
 <input name="q1" id="q1" value="3" type="radio"> <font color="black">
-a single point </font> <br>
+Always gives lower energy </font> <br>
 <input name="q1" id="q1" value="2" type="radio"><font color="black">
-will lie on a single line </font> <br>
+Is optimized for small molecules </font> <br>
 <input name="q1" id="q1" value="1" type="radio"> <font color="black">
-will lie on a plane </font> <br>
+Contains one basis function for each atomic orbital </font> <br>
 <input name="q1" id="q1" value="0" type="radio"><font color="black">
 None of the above </font> <br>
 <br>
 
-<br><b>Q2.</b> None of the eigen values are zero, and not all of them are equal. 
-If the input vector 
-\(P\) is a point in \(N\)-dimensional space on a sphere, the \(\vec Q\) will be  
-<br>
-<input name="q2" id="q2" value="3" type="radio"> <font color="black">
-a single point </font> <br>
-<input name="q2" id="q2" value="2" type="radio"><font color="black">
-will lie on a single line </font> <br>
-<input name="q2" id="q2" value="1" type="radio"> <font color="black">
-will lie on a sphere </font> <br>
-<input name="q2" id="q2" value="0" type="radio"><font color="black">
-will lie on a ellipse </font> <br>
-<br>
 <br>
 <input value="Submit Answers" type="submit"> </p>
-</form>
 </div>
 
 <div id="references"><br>
@@ -159,7 +101,7 @@ will lie on a ellipse </font> <br>
         <li> Chapter 6: Linear system of equations
         <li> Chapter 7: Eigen systems
        </ul>
-     <li> Wikipedia article on Eigen systems is quite informative of applications in various fields of science and engineering: <a href="http://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors" target="_blank">http://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors</a>
+     <li> Wikipedia article on Eigensystems is quite informative of applications in various fields of science and engineering: <a href="http://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors" target="_blank">http://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors</a>
     </ol>
      
    

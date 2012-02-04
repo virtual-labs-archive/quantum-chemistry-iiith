@@ -210,72 +210,38 @@ displayed.</li>
 </li>
 </ol>
 </div>
-<script>
-	var len=8;
-	var Ans = new Array();
-	Ans["q1"]=0;
-	Ans["q2"]=0;
-	Ans["q3"]=0;
-	Ans["q4"]=0;
-	Ans["q5"]=0;
-	Ans["q6"]=0;
-	Ans["q7"]=0;
-	Ans["q8"]=0;
-	function checkAns(form)
-	{
-		wrong="";
-		for(i=1;i<=len;++i)
-		{
-			var ll = form["q"+i].length;
-			var sel=-1;
-			for(j=0;j<ll;++j)
-			{
-				if(form["q"+i][j].checked)
-					sel=j;
-			}
-			//if(i==5)alert(Ans["q"+i]!=parseInt(sel));
-			if(Ans["q"+i]!=parseInt(sel))
-				wrong+="Q"+i+","
-		}
-		if(wrong!="")
-			alert(wrong +"  are wrong");
-		else 
-			alert("all ans are correct.")
-			
-	}
-</script>
 
-<div id="quiz" >
+
+<div id="quiz">
         <h2>Quiz</h2>
         <p>
-        <form name="qz" onsubmit="checkAns(this);">
-	        <b>Q1.</b> A function or potential energy surface can have multiple global minima or maxima.<br>
-	        <input type="radio" name="q1" id="q1" value="1" > <font color="green"> True </font> <br>
-	        <input type="radio" name="q1" id="q1" value="0" ><font color="red"> False </font> <br/><br/>
-	        <b>Q2.</b> The gradient of a function points in the direction of minima or descent. <br>
-	        <input type="radio" name="q2" id="q2" value="1"> <font color="green"> True </font> <br>
-	        <input type="radio" name="q2" id="q2"value="0"><font color="red"> False </font> <br/><br/>
-	        <b>Q3.</b> Picking of initial point \(x_0\) and step size chosen in the Steepest Descent method does not affect or matter in the optimization process. <br>
-	        <input type="radio" name="q3" id="q3" value="1"> <font color="green"> True </font> <br>
-	        <input type="radio" name="q3" id="q3"value="0"><font color="red"> False </font> <br/><br/>
-	        <b>Q4.</b> Newton-Raphson method converges quadratically. <br>
-	        <input type="radio" name="q4" id="q4" value="1"> <font color="green"> True </font> <br>
-	        <input type="radio" name="q4" id="q4" value="0"><font color="red"> False </font> <br/><br/>
-	        <b>Q5.</b> Newton-Raphson method can converge to (a) minima (b) maxima (c) saddle point. <br>
-	        <input type="radio" name="q5" id="q5" value="1"> <font color="green"> Minima alone</font> <br>
-	        <input type="radio" name="q5" id="q5"value="2"><font color="red"> Either Maxima or minima but not saddle point </font> <br/>
-	        <input type="radio" name="q5" id="q5"value="3"><font color="blue"> All of the three: maxima, minima and saddle point </font> <br/><br/>
-	        <b>Q6.</b> Newton-Raphson optimization a one variable function always converges to the solution.  <br>
-	        <input type="radio" name="q6" id="q6" value="1"> <font color="green"> True </font> <br>
-	        <input type="radio" name="q6" id="q6"value="0"><font color="red"> False </font> <br/><br/>
-	        <b>Q7.</b> Steepest Descent method always converges to a solution.  <br>
-	        <input type="radio" name="q7" id="q7" value="1"> <font color="green"> True </font> <br>
-	        <input type="radio" name="q7" id="q7"value="0"><font color="red"> False </font> <br/><br/>
-	        <b>Q8.</b> The iteration step in the Newton-Raphson's method might fall in infinite loop, in case of oscillating solution. <br>
-	        <input type="radio" name="q8" id="q8" value="1"> <font color="green"> True </font> <br>
-	        <input type="radio" name="q8" id="q8"value="0"><font color="red"> False </font> <br/><br/>
-	        <input type="submit" value="Submit Answers" >
-        </form>
+        <b>Q1.</b> A function or potential energy surface can have multiple global minima or maxima.<br>
+        <input type="radio" name="q1" id="q1" value="1"> <font color="green"> True </font> <br>
+        <input type="radio" name="q1" id="q1" value="0"><font color="red"> False </font> <br/><br/>
+        <b>Q2.</b> The gradient of a function points in the direction of minima or descent. <br>
+        <input type="radio" name="q2" id="q2" value="1"> <font color="green"> True </font> <br>
+        <input type="radio" name="q2" id="q2"value="0"><font color="red"> False </font> <br/><br/>
+        <b>Q3.</b> Picking of initial point \(x_0\) and step size chosen in the Steepest Descent method does not affect or matter in the optimization process. <br>
+        <input type="radio" name="q3" id="q3" value="1"> <font color="green"> True </font> <br>
+        <input type="radio" name="q3" id="q3"value="0"><font color="red"> False </font> <br/><br/>
+        <b>Q4.</b> Newton-Raphson method converges quadratically. <br>
+        <input type="radio" name="q4" id="q4" value="1"> <font color="green"> True </font> <br>
+        <input type="radio" name="q4" id="q4" value="0"><font color="red"> False </font> <br/><br/>
+        <b>Q5.</b> Newton-Raphson method can converge to (a) minima (b) maxima (c) saddle point. <br>
+        <input type="radio" name="q5" id="q5" value="1"> <font color="green"> Minima alone</font> <br>
+        <input type="radio" name="q5" id="q5"value="2"><font color="red"> Either Maxima or minima but not saddle point </font> <br/>
+        <input type="radio" name="q5" id="q5"value="3"><font color="blue"> All of the three: maxima, minima and saddle point </font> <br/><br/>
+        <b>Q6.</b> Newton-Raphson optimization a one variable function always converges to the solution.  <br>
+        <input type="radio" name="q5" id="q5" value="1"> <font color="green"> True </font> <br>
+        <input type="radio" name="q5" id="q5"value="0"><font color="red"> False </font> <br/><br/>
+        <b>Q7.</b> Steepest Descent method always converges to a solution.  <br>
+        <input type="radio" name="q5" id="q5" value="1"> <font color="green"> True </font> <br>
+        <input type="radio" name="q5" id="q5"value="0"><font color="red"> False </font> <br/><br/>
+        <b>Q8.</b> The iteration step in the Newton-Raphson's method might fall in infinite loop, in case of oscillating solution. <br>
+        <input type="radio" name="q5" id="q5" value="1"> <font color="green"> True </font> <br>
+        <input type="radio" name="q5" id="q5"value="0"><font color="red"> False </font> <br/><br/>
+
+        <input type="submit" value="Submit Answers">
         </p>
 </div>
 
@@ -307,8 +273,7 @@ displayed.</li>
 </ol>
 </div>
 
-<div id="feedback">
-   <h2>
-      <a href="http://virtual-labs.ac.in/feedback/" target="_blank">Feedback</a>
-   </h2>
+<div>
+   <h2>Feedback</h2>
+   <a href="http://virtual-labs.ac.in/feedback/" target="_blank">http://deploy.iiit.ac.in/feedback</a>
 </div>

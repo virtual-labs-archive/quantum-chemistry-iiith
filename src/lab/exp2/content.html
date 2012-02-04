@@ -146,11 +146,44 @@ Repeat the above steps for every molecule in the list.<br>
 
 
 </div>
-
+<script>
+	var len=5;
+	var Ans = new Array();
+	Ans["q1"]=0;
+	Ans["q2"]=0;
+	Ans["q3"]=0;
+	Ans["q4"]=0;
+	Ans["q5"]=0;
+	
+	function checkAns(form)
+	{
+		
+		var wrong="";
+		for(i=1;i<=len;++i)
+		{
+			var ll = form["q"+i].length;
+			var sel=-1;
+			for(j=0;j<ll;++j)
+			{
+				if(form["q"+i][j].checked)
+					sel=j;
+			}
+			//if(i==5)alert(Ans["q"+i]!=parseInt(sel));
+			if(Ans["q"+i]!=parseInt(sel))
+				wrong+="Q"+i+","
+		}
+		if(wrong!="")
+			alert(wrong +"  are wrong");
+		else 
+			alert("all ans are correct.")
+			
+	}
+</script>
 
 <div id="quiz">
 <h2>Quiz</h2>
         <p>
+        <form name="qz" onsubmit="checkAns(this);">
         <b>Q1.</b> Greater the extent of conjugation, larger is the wavelength of the lowest electronic transition.<br>
         <input name="q1" id="q1" value="1" type="radio"> <font color="green"> True </font> <br>
         <input name="q1" id="q1" value="0" type="radio"><font color="red"> False </font> <br><br>
@@ -168,9 +201,9 @@ particle in 1-dimensional box.<br>
         <b>Q5.</b> For conjugated molecule, based on the particle in 1-d box model, the excited state involved in the lowest electronic energy transition can be expected to have no nodes<br>
         <input name="q5" id="q5" value="1" type="radio"> <font color="green"> True </font> <br>
         <input name="q5" id="q5" value="0" type="radio"><font color="red"> False </font> <br><br>
-
         <input value="Submit Answers" type="submit">
-        </p>
+        </form>
+         </p>
 </div>
 
 
@@ -196,9 +229,10 @@ at <a href="http://en.wikipedia.org/wiki/Particle_in_a_box" target="_blank">http
 
 </div>
 
-i<div id="feedback">
-      <h2>
-               <a href="http://virtual-labs.ac.in/feedback/" target="_blank">Feedback</a>
-                  </h2>
-               </div>
+
+<div id="feedback">
+   <h2>
+      <a href="http://virtual-labs.ac.in/feedback/" target="_blank">Feedback</a>
+   </h2>
+</div>
 

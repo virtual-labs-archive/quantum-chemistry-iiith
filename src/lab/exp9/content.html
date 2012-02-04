@@ -50,29 +50,59 @@ The other methods for conformational analysis are Random search method, Distance
 <a href="experiment/index.php"  target="blank"> Click here to start the experiment</a>
 
 </div>
-
+<script>
+	var len=2;
+	var Ans = new Array();
+	Ans["q1"]=0;
+	Ans["q2"]=0;
+	
+	function checkAns(form)
+	{
+		wrong="";
+		for(i=1;i<=len;++i)
+		{
+			var ll = form["q"+i].length;
+			var sel=-1;
+			for(j=0;j<ll;++j)
+			{
+				if(form["q"+i][j].checked)
+					sel=j;
+			}
+			//if(i==5)alert(Ans["q"+i]!=parseInt(sel));
+			if(Ans["q"+i]!=parseInt(sel))
+				wrong+="Q"+i+","
+		}
+		if(wrong!="")
+			alert(wrong +"  are wrong");
+		else 
+			alert("all ans are correct.")
+			
+	}
+</script>
 <div id="quiz">
 <h2>Quiz</h2>
+<form name="qz" onsubmit="checkAns(this);">
 <p>
 <ol>
-
+	
   <li> Which conformation among syn and anti of dichloroethane is more stable?  <br>
-        <input type="radio" name="q5" id="q5" value="1"> <font color="green"> Syn</font> <br>
-        <input type="radio" name="q5" id="q5"value="2"><font color="red"> Anti </font> <br> 
-        <input type="radio" name="q5" id="q5"value="3"><font color="black"> Both are equally stable </font> <br> 
+        <input type="radio" name="q1" id="q1" value="1"> <font color="green"> Syn</font> <br>
+        <input type="radio" name="q1" id="q1"value="2"><font color="red"> Anti </font> <br> 
+        <input type="radio" name="q1" id="q1"value="3"><font color="black"> Both are equally stable </font> <br> 
         <br><br> 
      </li>
  
      <li>What is the value of dihedral angle in anti conformation of dichloroethane?  <br>
-        <input type="radio" name="q5" id="q5" value="1"> <font color="green"> 0 degree </font> <br>
-        <input type="radio" name="q5" id="q5"value="2"><font color="red">  90 degree </font> <br>
-        <input type="radio" name="q5" id="q5"value="3"><font color="black"> 180 degree</font> <br>
-        <input type="radio" name="q5" id="q5"value="4"><font color="blue"> 270 degree </font> <br>
+        <input type="radio" name="q2" id="q2" value="1"> <font color="green"> 0 degree </font> <br>
+        <input type="radio" name="q2" id="q2"value="2"><font color="red">  90 degree </font> <br>
+        <input type="radio" name="q2" id="q2"value="3"><font color="black"> 180 degree</font> <br>
+        <input type="radio" name="q2" id="q2"value="4"><font color="blue"> 270 degree </font> <br>
      </li>
 </ol>
         <br>
         <input type="submit" value="Submit Answers">
         </p>
+        </form>
       </div>
 
 <div id="references"> 
@@ -87,9 +117,8 @@ The other methods for conformational analysis are Random search method, Distance
 </div>
 
 <div id="feedback">
-      <h2>
-               <a href="http://virtual-labs.ac.in/feedback/" target="_blank">Feedback</a>
-                  </h2>
-               </div>
-
+   <h2>
+      <a href="http://virtual-labs.ac.in/feedback/" target="_blank">Feedback</a>
+   </h2>
+</div>
 
