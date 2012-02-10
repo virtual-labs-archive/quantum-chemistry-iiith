@@ -214,11 +214,11 @@ displayed.</li>
 	var len=8;
 	var Ans = new Array();
 	Ans["q1"]=0;
-	Ans["q2"]=0;
-	Ans["q3"]=0;
+	Ans["q2"]=1;
+	Ans["q3"]=1;
 	Ans["q4"]=0;
-	Ans["q5"]=0;
-	Ans["q6"]=0;
+	Ans["q5"]=2;
+	Ans["q6"]=1;
 	Ans["q7"]=0;
 	Ans["q8"]=0;
 	function checkAns(form)
@@ -241,14 +241,14 @@ displayed.</li>
 			alert(wrong +"  are wrong");
 		else 
 			alert("all ans are correct.")
-			
+		return false;
 	}
 </script>
 
 <div id="quiz" >
         <h2>Quiz</h2>
         <p>
-        <form name="qz" onsubmit="checkAns(this);">
+        <form name="qz" onsubmit="return checkAns(this);">
 	        <b>Q1.</b> A function or potential energy surface can have multiple global minima or maxima.<br>
 	        <input type="radio" name="q1" id="q1" value="1" > <font color="green"> True </font> <br>
 	        <input type="radio" name="q1" id="q1" value="0" ><font color="red"> False </font> <br/><br/>

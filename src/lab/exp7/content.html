@@ -84,8 +84,8 @@ In the applet to the right, you will be selecting vector \(P\) and notice the ve
 <script>
 	var len=2;
 	var Ans = new Array();
-	Ans["q1"]=0;
-	Ans["q2"]=0;
+	Ans["q1"]=1;
+	Ans["q2"]=3;
 	
 	function checkAns(form)
 	{
@@ -107,12 +107,12 @@ In the applet to the right, you will be selecting vector \(P\) and notice the ve
 			alert(wrong +"  are wrong");
 		else 
 			alert("all ans are correct.")
-			
+		return false;	
 	}
 </script>
 <div id="quiz">
 <h2>Quiz</h2>
- <form name="qz" onsubmit="checkAns(this);">
+ <form name="qz" onsubmit="return checkAns(this);">
 <p>
 Let \(\{\lambda_i, i =1,N\}\) and \(\{\vec v_i, i = 1,N\}\) denote the set of eigen values 
 and the corresponding set of eigen vectors for the matrix \({\bf M}\).  

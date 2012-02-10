@@ -53,8 +53,8 @@ The other methods for conformational analysis are Random search method, Distance
 <script>
 	var len=2;
 	var Ans = new Array();
-	Ans["q1"]=0;
-	Ans["q2"]=0;
+	Ans["q1"]=1;
+	Ans["q2"]=2;
 	
 	function checkAns(form)
 	{
@@ -76,12 +76,12 @@ The other methods for conformational analysis are Random search method, Distance
 			alert(wrong +"  are wrong");
 		else 
 			alert("all ans are correct.")
-			
+		return false;	
 	}
 </script>
 <div id="quiz">
 <h2>Quiz</h2>
-<form name="qz" onsubmit="checkAns(this);">
+<form name="qz" onsubmit="return checkAns(this);">
 <p>
 <ol>
 	

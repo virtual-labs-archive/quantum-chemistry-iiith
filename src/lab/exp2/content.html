@@ -152,8 +152,8 @@ Repeat the above steps for every molecule in the list.<br>
 	Ans["q1"]=0;
 	Ans["q2"]=0;
 	Ans["q3"]=0;
-	Ans["q4"]=0;
-	Ans["q5"]=0;
+	Ans["q4"]=1;
+	Ans["q5"]=1;
 	
 	function checkAns(form)
 	{
@@ -176,14 +176,14 @@ Repeat the above steps for every molecule in the list.<br>
 			alert(wrong +"  are wrong");
 		else 
 			alert("all ans are correct.")
-			
+		return false;
 	}
 </script>
 
 <div id="quiz">
 <h2>Quiz</h2>
         <p>
-        <form name="qz" onsubmit="checkAns(this);">
+        <form name="qz" onsubmit="return checkAns(this);">
         <b>Q1.</b> Greater the extent of conjugation, larger is the wavelength of the lowest electronic transition.<br>
         <input name="q1" id="q1" value="1" type="radio"> <font color="green"> True </font> <br>
         <input name="q1" id="q1" value="0" type="radio"><font color="red"> False </font> <br><br>

@@ -126,9 +126,9 @@ of inertia equation, we get the bond length.
 <script>
 	var len=5;
 	var Ans = new Array();
-	Ans["q1"]=0;
-	Ans["q2"]=0;
-	Ans["q3"]=0;
+	Ans["q1"]=2;
+	Ans["q2"]=3;
+	Ans["q3"]=1;
 	Ans["q4"]=0;
 	Ans["q5"]=0;
 	
@@ -152,13 +152,13 @@ of inertia equation, we get the bond length.
 			alert(wrong +"  are wrong");
 		else 
 			alert("all ans are correct.")
-			
+		return false;
 	}
 </script>
 <div id="quiz">
 <h2>Quiz</h2>
 <p>
- <form name="qz" onsubmit="checkAns(this);">
+ <form name="qz" onsubmit="return checkAns(this);">
 <ol>
     <li> Which of the following molecule does NOT exhibit infrared spectra  <br>
         <input type="radio" name="q1" id="q1" value="1"> <font color="green"> HCl</font> <br>

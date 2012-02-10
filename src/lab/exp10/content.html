@@ -62,9 +62,9 @@ In the above  substitution reaction, the nucleophile Cl-  attacks the reactant i
 <script>
 	var len=5;
 	var Ans = new Array();
-	Ans["q1"]=0;
-	Ans["q2"]=0;
-	Ans["q3"]=0;
+	Ans["q1"]=1;
+	Ans["q2"]=3;
+	Ans["q3"]=1;
 	Ans["q4"]=0;
 	Ans["q5"]=0;
 
@@ -88,12 +88,12 @@ In the above  substitution reaction, the nucleophile Cl-  attacks the reactant i
 			alert(wrong +"  are wrong");
 		else 
 			alert("all ans are correct.")
-			
+		return false;	
 	}
 </script>
 <div id="quiz">
 <h2>Quiz</h2>
-<form name="qz" onsubmit="checkAns(this);">
+<form name="qz" onsubmit="return checkAns(this);">
 <p>
 <ol>
 
@@ -125,7 +125,7 @@ In the above  substitution reaction, the nucleophile Cl-  attacks the reactant i
         <input type="radio" name="q3" id="q3"value="2"><font color="red">  False </font> <br>
      </li>
     
-     <li> Is the geometry of the transition state differennt or same comapred with reactant <br>
+     <li> Is the geometry of the transition state different comapred with reactant <br>
      <input type="radio" name="q4" id="q4" value="1"> <font color="green"> True </font> <br> 
         <input type="radio" name="q4" id="q4"value="4"><font color="blue"> False </font> <br>
      </li>
