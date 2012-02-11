@@ -1,27 +1,139 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.-->
 
-<h1 id="main-title"> Calculation of Vibrational Frequency of Molecules and Visualization of Normal Modes
-</h1>
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
 
-<div id="introduction">
-<h2>Introduction</h2>
-Different kinds of calculations require different kinds of input. But some items are to be specified in all the cases. The two most popular computer programs for carrying out ab initio quantum chemical calculations is the "Gaussian" and "Gamess" series.
-<p></p>
-<p>
-To study a molecule using these software we need to specify the molecule's Cartesian coordinates or the z-matrix of the molecule or the redundant internal coordinates of the molecule.
-</p>
-<p>
-We have to also specify the method and also the basis set. For a single point energy calculations the geometry specified by the z-matrix alone is the input.
-</p>
-</div>
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
 
-<div id="objective">
-<h2>Objective</h2>
-To perform single point energy and vibrational frequency calculations using variational principle, on simple molecules.
-</div>
+<div id="experiment"> <!-- The Experiment Document Container-->
 
-<div id="theory">
-<h2>Theory</h2>
-<p>
+  <!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+
+  <header id="experiment-header" class="default">
+  
+    <div id="experiment-header-logo" class="logo">
+      <!-- Enclose the logo image of your lab or write it in 
+      text-->
+      <img src="../images/logo.jpg" />
+    </div>
+
+    <div id="experiment-header-heading" class="heading">
+      <!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+      <a href="../index.html">Quantum chemistry Virtual lab 	</a>	
+    </div>
+
+    <!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+
+  </header>
+
+
+  <!-- The lab article is the main content area where all the 
+  experiment content sits-->
+  <article id="experiment-article">
+  
+    <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+     <div id="experiment-article-breadcrumb" class="breadcrumb">
+     </div>
+    
+      <header id="experiment-article-heading" class="heading">
+        <!-- You can add a welcome message or title of the 
+        experiment here -->
+        Calculation of Vibrational Frequency of Molecules and Visualization of Normal Modes
+        <!-- Add any additional element if required with proper 
+        enclosing-->
+      </header>
+
+      <!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+      <nav id="experiment-article-navigation" class="default">
+        <ul id="experiment-article-navigation-menu">
+          <!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          <li> tag as shown below-->
+        </ul>
+      </nav>
+
+      <!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+      <div id="experiment-article-sections">
+
+        <!-- First section of the article-->
+        <section id="experiment-article-section-1">
+          
+          <div id="experiment-article-section-1-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab -->
+	    <img src="../images/introduction.jpg" />
+	  </div>	
+          
+          <!-- The heading for the section can be enclosed in a 
+          div tag. -->
+          <div id="experiment-article-section-1-heading" 
+          class="heading">
+            Introduction
+          </div>
+
+          <!-- Write the section content inside a paragraph 
+          element, You can also include images with <img> tag -->
+          <div id="experiment-article-section-1-content" 
+          class="content">	
+          	<p>
+		Different kinds of calculations require different kinds of input.
+		 But some items are to be specified in all the cases. The two
+		  most popular computer programs for carrying out ab initio quantum
+		   chemical calculations is the "Gaussian" and "Gamess" series.
+		</p>
+		<p>
+		To study a molecule using these software we need to specify the
+		 molecule's Cartesian coordinates or the z-matrix of the molecule or
+		  the redundant internal coordinates of the molecule.
+		</p>
+		<p>
+		We have to also specify the method and also the basis set. For a single
+		 point energy calculations the geometry specified by the z-matrix alone 
+		 is the input.
+		</p>
+        </div>
+
+
+      </section>
+
+      <!-- Second section of the article-->
+      <section id="experiment-article-section-2">
+        
+        <div id="experiment-article-section-2-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab. -->
+	  <img src="../images/theory.jpg" />
+	</div>
+				
+        <!-- The heading for the section can be enclosed in a 
+        div tag. -->
+        <div id="experiment-article-section-2-heading" 
+        class="heading">
+          Theory
+        </div>
+
+
+        <!-- Write the section content inside a paragraph 
+        element, we can also include images with <img> tag -->
+        <div id="experiment-article-section-2-content" 
+        class="content">
+          <p>
 
 Ab initio quantum chemistry involves a choice of method and a choice of basis set. A number of different procedures are also available, such as single point calculations, geometry optimizations and calculations of frequencies.
 </p>
@@ -48,14 +160,13 @@ This procedure calculates the energy, wave function and the other requested prop
 The frequency calculations can be carried out for two main reasons. First one is to predict the frequencies and the IR and Raman intensities. Frequencies which are calculated are harmonic frequencies as they are obtained by assuming the potential energy surface to be harmonic. After running an optimization calculation, if all the calculated frequencies are real and positive then that contributes to the local or global minimum of the molecule taken. If we have a stationary point other than the minimum then we don't get all positive values but there would be negative numbers which are often called as "imaginary frequencies". A transition state for any molecule would have only one imaginary frequency. If the symmetry of the molecule is restrained it gives more than one imaginary frequency during optimization. For a molecule of n atoms, the number of normal modes is (3n-6) if the molecule taken is nonlinear and it is (3n-5) if the molecule is linear.
 </p>
 <br>
-</div>
-
-<div id="software">
 <h2>GAMESS</h2>
-
+<p>
 The software used for all calculations is GAMESS. The input file description is as follows:<br>
+
 <br>
 Input file:<br><br>
+</p>
 <ol>
 <li>$CONTRL: This group has several subsections which speak about various global switches.</li><br>
 <ol><li>SCFTYP: together  with MPLEVEL or CTYP specifies the wavefunction. The user has the choice to choose from RHF, UHF, MCSCF and so on.</li><br>
@@ -114,28 +225,76 @@ Input file:<br><br>
 
 <li>$DATA: This group describes the global molecular data such as point group symmetry, nuclear coordinates, and possibly the basis set. It consists of a series of free format card images.</li><br>
 </ol>
-
+<p>
 For further details about the input file go to the GAMESS website by clicking <a href="http://www.msg.chem.iastate.edu/gamess/" target="_blank">here</a>
-</div>
+</p>
 
-<div id="manual">
-<h2>Manual</h2>
-<br>
-<!--
-<ol>
-  <li>Select a molecule (a) water (b) ammonia (c) methane (d)benzene</li><br>
-  <li>Molecule will be displayed</li><br>
-  <li>Click on the molecule to generate the z-matrix for that molecule</li><br>
-  <li>The next slide gives option on the filling of the z-matrix with appropriate bond lengths, angles and dihedrals(options provided at the side of the page which are to be selected correctedly so that they are filled)</li><br>
-  <li>The next slide goes to selection of the calculation(siglepoint, frequency etc)</li><br>
-  <li>The next turn tells us the choice of the  basis set to be used.</li><br>
-  <li>Select the symmetry of the molecule  from the options provided.</li><br>
-  <li>Select the calculation to be done on the molecule .</li><br>
-  <li>The z-matrix box appears for that molecule along with the calculations that are to be done on that particular molecule.</li><br>
-  <li>The input file is ready for that particular type of molecule. Upon clicking the submit button, the output for that particular molecule is being displayed.</li>
-</ol>
--->
-<ol>
+        </div>
+      </section>
+
+
+      <section id="experiment-article-section-3">
+        
+        <div id="experiment-article-section-3-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab. -->
+	  <img src="../images/objective.jpg" />
+	</div>
+     
+        <div id="experiment-article-section-3-heading" 
+        class="heading">
+          Objective
+        </div>
+
+        <div id="experiment-article-section-3-content" 
+        class="content">
+        <p>
+          To perform single point energy and vibrational frequency calculations using variational principle, on simple molecules.
+	</p>
+        </div>
+
+      </section>
+
+
+      <section id="experiment-article-section-4">
+
+        <div id="experiment-article-section-4-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	  <img src="../images/simulation.jpg" />
+	</div>
+
+        <div id="experiment-article-section-4-heading" 
+        class="heading">
+          Experiment
+        </div>
+
+        <div id="experiment-article-section-4-content" 
+        class="content">
+          <p>
+	        <a href="experiment/index.php" target="_blank"> Start the Experiment  </a>
+          </p>
+        </div>
+
+      </section>
+
+      <section id="experiment-article-section-5">
+   
+        <div id="experiment-article-section-5-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	  <img src="../images/manual.jpg" />
+	</div>
+
+        <div id="experiment-article-section-5-heading" 
+        class="heading">
+          Manual
+        </div>
+
+        <div id="experiment-article-section-5-content" 
+        class="content">
+          <p> 
+          <ol>
 <li> Select a molecule (a) Water (b) Ammonia (c) Benzene (d) Formaldehyde (e) Benzene (f) Fullerene(C60). </li>
 <li> Fill the atom connectivity to generate the z-matrix for the selected molecule. </li>
 <li> The next slide shows the method, basis set and the procedure used for the frequency calculation of  the considered molecule under study. </li>
@@ -145,50 +304,31 @@ For further details about the input file go to the GAMESS website by clicking <a
 <li> Next slide helps us in visualisation of the vibrational frequencies of the selected molecule. </li>
 </ol>
 <br>
+	<p>
 Repeat the above steps for every molecule in the list.<br><br>
-</div>
+</p>
+           </p>
 
-<div id="experiment">
-<h2>Experiment</h2>
-<!-- <li><a href="http://pascal.iiit.ac.in/ccnsb/qchem/qm-freq/vibration.html">Click here to start the experiment</a></li> -->
-<a href="experiment/index.php" target="_blank"> Experiment  </a>
-</div>
-<script>
-	var len=6;
-	var Ans = new Array();
-	Ans["q1"]=2;
-	Ans["q2"]=2;
-	Ans["q3"]=1;
-	Ans["q4"]=0;
-	Ans["q5"]=0;
-	Ans["q6"]=2;
-	
-	function checkAns(form)
-	{
-		wrong="";
-		for(i=1;i<=len;++i)
-		{
-			var ll = form["q"+i].length;
-			var sel=-1;
-			for(j=0;j<ll;++j)
-			{
-				if(form["q"+i][j].checked)
-					sel=j;
-			}
-			//if(i==5)alert(Ans["q"+i]!=parseInt(sel));
-			if(Ans["q"+i]!=parseInt(sel))
-				wrong+="Q"+i+","
-		}
-		if(wrong!="")
-			alert(wrong +"  are wrong");
-		else 
-			alert("all ans are correct.")
-		return false;	
-	}
-</script>
-<div id="quiz">
+          </div>
 
-<form name="qz" onsubmit="return checkAns(this);">
+        </section>
+
+        <section id="experiment-article-section-6">
+      
+          <div id="experiment-article-section-6-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/quizzes.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-6-heading" 
+          class="heading">
+            Quizzes
+          </div>
+
+          <div id="experiment-article-section-6-content" 
+          class="content">
+           <form name="qz" onsubmit="return checkAns(this);">
 <h2>Quiz</h2>
 <p> <b>Q1.</b> A minimal valence basis set is the one in which<br>
 <input name="q1" id="q1" value="3" type="radio"> <font color="black">
@@ -255,23 +395,110 @@ None of the above </font> <br>
 <input name="q6" id="q6" value="0" type="radio"><font color="black">
 3n </font> <br>
 <br>
-<input value="Submit Answers" type="submit"> </p>
+<input value="Submit Answers" type="submit" class="button"> </p>
 </form>
-</div>
 
-<div id="references"><br>
-<h2>References</h2>
-<ol>
+          </div>
+
+        </section>
+	<!--
+        <section id="experiment-article-section-7">
+	  
+          <div id="experiment-article-section-7-icon" 
+          class="icon">
+	    <img src="../images/procedure.jpg" />
+	  </div>
+	
+          <div id="experiment-article-section-7-heading" 
+          class="heading">
+	    Procedure
+	  </div>
+	
+          <div id="experiment-article-section-7-content" 
+          class="content">
+	    <p>
+	      Procedure for the experiment is as follows.
+	    </p>
+	  </div>
+        </section>
+	-->	
+		
+        <section id="experiment-article-section-8">
+   
+          <div id="experiment-article-section-8-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/readings.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-8-heading" 
+          class="heading">
+            Further Readings
+          </div>
+
+          <div id="experiment-article-section-8-content" 
+          class="content">
+           <ol>
   <li>Griffiths, David J. (2004). Introduction to Quantum Mechanics (2nd ed.). Prentice Hall.</li>
   <li><a href="http://chemistry.umeche.maine.edu/Modeling/GGZmat.html" target="_blank">http://chemistry.umeche.maine.edu/Modeling/GGZmat.html</a></li>
   <li><a href="http://cmt.dur.ac.uk/sjc/thesis_dlc/node36.html" target="_blank">http://cmt.dur.ac.uk/sjc/thesis_dlc/node36.html</a></li>
   <li> "General Atomic and Molecular Electronic Structure System" M.W.Schmidt, K.K.Baldridge, J.A.Boatz, S.T.Elbert, M.S.Gordon, J.H.Jensen, S.Koseki, N.Matsunaga, K.A.Nguyen, S.Su, T.L.Windus, M.Dupuis, J.A.Montgomery J. Comput. Chem., 14, 1347-1363(1993).</li>
 </ol>
+          </div>
+
+        </section>
+	        <section id="lab-article-section-6">
+       
+       <div id="lab-article-section-6-icon" class="icon">
+         <!-- Enclose the icon image for the section. -->
+ <img src="images/manual.jpg" />
 </div>
 
-<div id="feedback">
-   <h2>
-      <a href="http://virtual-labs.ac.in/feedback/" target="_blank">Feedback</a>
-   </h2>
+<!-- The heading for the section can be enclosed in a div tag and shown with a <h2> tag -->
+
+<div id="lab-article-section-6-heading" class="heading">
+Feedback
 </div>
-</body></html>
+
+<!-- Write the section content inside a paragraph element, You can also include images with <img> tag -->
+<div id="lab-article-section-6-content" class="content">
+ <p>
+  <ul>
+<li><a href="http://virtual-labs.ac.in/feedback/" >Sponsered by MHRD (NME-ICT) </a></li>
+
+  </ul>
+ </p>
+</div>
+
+     </section>
+      </div>
+
+
+    <!-- An article can have a sidebar that contain related 
+    links and additional material (however it is kept optional 
+    at this moment) -->
+    <aside id="lab-article-sidebar" class="default">
+      <!-- put the content that you want to appear in the 
+      sidebar -->	
+    </aside>
+
+
+    <!-- Article footer can display related content and 
+    additional links -->						
+    <footer id="lab-article-footer" class="default">
+      <!-- Put the content that you want to appear here -->
+    </footer>
+
+  </article>
+
+
+  <!-- Links to other labs, about us page can be kept the lab 
+  footer-->
+ <footer id="lab-footer" class="footer">
+   <!-- Put the content here-->
+<a href="http://virtual-labs.ac.in/nmeict" >Sponsered by MHRD (NME-ICT) </a> | <a href="http://virtual-labs.ac.in/licensing" target="_blank"> Licensing Terms </a>
+</footer>
+</div>		
+
+</body>
+</html>
