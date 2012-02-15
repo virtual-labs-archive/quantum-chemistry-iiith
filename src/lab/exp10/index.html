@@ -155,30 +155,8 @@
 	Ans["q3"]=1;
 	Ans["q4"]=0;
 	Ans["q5"]=0;
-
-	function checkAns(form)
-	{
-		wrong="";
-		for(i=1;i<=len;++i)
-		{
-			var ll = form["q"+i].length;
-			var sel=-1;
-			for(j=0;j<ll;++j)
-			{
-				if(form["q"+i][j].checked)
-					sel=j;
-			}
-			//if(i==5)alert(Ans["q"+i]!=parseInt(sel));
-			if(Ans["q"+i]!=parseInt(sel))
-				wrong+="Q"+i+","
-		}
-		if(wrong!="")
-			alert(wrong +"  are wrong");
-		else 
-			alert("all ans are correct.")
-		return false;	
-	}
 </script>
+<script type="text/javascript" src="../js/quiz.js">  </script>
 
   <!-- ***************************************************** -->
   
