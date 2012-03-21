@@ -42,10 +42,10 @@ $html = file_get_html('./content.html');
         //print_r($nav);
 
 $vlab_url = "http://virtual-labs.ac.in/"; 
-$css_js   = "./"; 
-$lab_url  = "index.php";
+$css_js   = "../";
+ $lab_url  = "index.php";
 $exp_url  =  "exp/index.php";
-$base_url = $lab_url;
+$base_url = "http://".$_SERVER['HTTP_HOST'] . $_SERVER['SCRIPT_NAME']; 
 
 include('./exp_template.php');
 
