@@ -52,10 +52,10 @@ ul#list-nav li a {
 <div id="header"><!--header starts-->
 			<ul id="list-nav">
 				<li><a href="../../" target="blank" style="border-top-left-radius:0.8em;border-bottom-left-radius:0.8em;">HOME</a></li>
-				<!--<li><a href="../exp1/index.php">EXPERIMENT 1</a></li>
-				<li><a href="../exp2/index.php">EXPERIMENT 2</a></li>
-				<li><a href="../exp3/index.php">EXPERIMENT 3</a></li>
-				<li><a href="../exp4/index.php">EXPERIMENT 4</a></li>-->
+				<!--<li><a href="./index.php">EXPERIMENT 1</a></li>
+				<li><a href="./index.php">EXPERIMENT 2</a></li>
+				<li><a href="./index.php">EXPERIMENT 3</a></li>
+				<li><a href="./index.php">EXPERIMENT 4</a></li>-->
 				<li style="text-decoration:none;padding:17px;width:740px;background:#009900;color:#eee;float:left;"></li>
 				<li><a href="../" target="blank" style="border-top-right-radius:0.8em;border-bottom-right-radius:0.8em;padding-left:00px">HELP</a></li>
 			</ul>
