@@ -1,3 +1,14 @@
+JAVAC=javac
+sources = $(vlab3 *.java)
+classes = $(sources:.java=.class)
+
+all: $(classes)
+
+clean :
+	rm -rf *.class
+%.class : %.java
+	$(JAVAC) $<
+
 build-dir=../build
 lib-dir=lib
 build-js-dir=${build-dir}/js
@@ -5,7 +16,7 @@ build-js-dir=${build-dir}/js
 theme=blue-icon
 
 
-all:  help-dir 
+all:  help-dir
 
 help-dir:
 	(find ${build-dir} -mindepth 1 -maxdepth 1 ! -name js -print0 | xargs -0n1 rm -rf)
@@ -19,12 +30,4 @@ help-dir:
 # http://superuser.com/questions/168130/unix-delete-files-and-folders-excluding-pattern
 clean:
 	(find ${build-dir} -mindepth 1 -maxdepth 1 ! -name js -print0 | xargs -0n1 rm -rf)
-
-
-
-
-
-
-
-
 
