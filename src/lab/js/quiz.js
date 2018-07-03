@@ -1,6 +1,5 @@
 function checkAns(form)
 	{
-		wrong="";
 		correct="";
 		var flag=0;
 		var a=0;
@@ -16,15 +15,14 @@ function checkAns(form)
 					
 					sel=j;
 					a++;
-					if(Ans["q"+i]!=parseInt(sel)){
-			
-				 wrong+="Q"+i+", ";
-				   flag++;}
-				  else if(Ans["q"+i]==parseInt(sel)){
+					
+				  if(Ans["q"+i]==parseInt(sel)){
 		          	
 		          correct+="Q"+i+", ";
 		          flag++;
 				   c++;}
+				  else if(Ans["q"+i]!=parseInt(sel)){
+				   flag++;}
 				}
 
 				
@@ -35,12 +33,12 @@ function checkAns(form)
 		}
 
 
-		wrong = wrong.substring(0,wrong.length-2);
+		correct = correct.substring(0,correct.length-2);
 		if(flag>=1){
-		if(wrong!="")
-			alert(wrong +"  are wrong.And others are correct.");
-		else if(correct!="")
-			alert(correct +"  are correct.And others are wrong");
+		if(correct!="")
+			alert(correct+"  correct");
+		else if(correct=="")
+			alert("None are correct");
 		return false;
 		}
 		else {
