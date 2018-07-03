@@ -1,6 +1,7 @@
 	function checkAns(form)
 	{
 		wrong="";
+		correct="";
 		var flag=0;
 		var a=0;
 		var b=0;
@@ -20,8 +21,9 @@
 				 wrong+="Q"+i+", ";
 				   flag++;}
 				  else if(Ans["q"+i]==parseInt(sel)){
-			
-		
+		          	
+		          correct+="Q"+i+", ";
+		          flag++;
 				   c++;}
 				}
 
@@ -36,9 +38,9 @@
 		wrong = wrong.substring(0,wrong.length-2);
 		if(flag>=1){
 		if(wrong!="")
-			alert(wrong +"  are wrong");
-		else 
-			alert("all ans are correct.")
+			alert(wrong +"  are wrong.And others are correct.");
+		else if(correct!="")
+			alert(correct +"  are correct.And others are wrong");
 		return false;
 		}
 		else {
