@@ -32,7 +32,7 @@
 <body >
 <pre class="brush:php;">
 	<?php
-		session_start();
+		session_star
 		$name = $_SESSION['name'];
 		$inp_file_name = $file_base."/".$name."/".$name."opt.inp";
 		$file=fopen($inp_file_name,'r')or die('error opening file');
