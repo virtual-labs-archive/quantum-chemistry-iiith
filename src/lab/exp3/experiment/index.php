@@ -60,7 +60,7 @@ ul#list-nav li a {
 
 		<div id="content" style="padding-top:50px;padding-bottom:30px;"><!--content starts-->
 			<center>
-			<applet code="vib_rotationalSpectroscopy.Spectroscopy$MyApplet" width="1100px" height="700px" >
+			<applet code="vib_rotationalSpectroscopy.Spectroscopy$MyApplet.class" width="1100px" height="700px" >
 			</applet>
 		</center>
 		</div><!--content ends-->	
