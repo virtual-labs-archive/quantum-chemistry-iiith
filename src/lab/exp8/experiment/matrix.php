@@ -165,7 +165,7 @@ function changeVal(input,row,col){
 					<tr>
 					<td>use</td>
 					<td><img src="images/x_.png"></img></td>
-					<td><a href="../index.html">see in main theory.</a> </td>
+					<td><a href="http://ccnsb04-iiith.virtual-labs.ac.in/exp8/index.php?section=Theory">see in main theory.</a> </td>
 					</tr>
 					</table>
 					</li>

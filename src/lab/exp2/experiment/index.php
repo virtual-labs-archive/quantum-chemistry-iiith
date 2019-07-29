@@ -63,7 +63,7 @@ ul#list-nav li a {
 
 		<div id="content" style="padding-top:50px;padding-bottom:30px;"><!--content starts-->
 			<center>
-			<applet code="uv_visible_spectroscopy.Uv_spectra$MyApplet" width="1100px" height="700px" >
+			<applet code="uv_visible_spectroscopy.Uv_spectra$MyApplet.class" width="1100px" height="700px" >
 			
 			</applet>
 		</center>
