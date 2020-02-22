@@ -1,0 +1,401 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.-->
+
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+<div id="experiment"> <!-- The Experiment Document Container-->
+
+  <!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+
+  <header id="experiment-header" class="default">
+  
+    <div id="experiment-header-logo" class="logo">
+      <!-- Enclose the logo image of your lab or write it in 
+      text-->
+      <img src="../images/logo.jpg" />
+    </div>
+
+    <div id="experiment-header-heading" class="heading">
+      <!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+        <script type="text/javascript" src="../js/MathJax/MathJax.js"> 
+  </script>
+  <script>
+	var len=5;
+	var Ans = new Array();
+	Ans["q1"]=1;
+	Ans["q2"]=3;
+	Ans["q3"]=1;
+	Ans["q4"]=0;
+	Ans["q5"]=0;
+</script>
+<script type="text/javascript" src="../js/quiz.js">  </script>
+      <a href="../index.php">Quantum chemistry Virtual lab </a>	
+    </div>
+
+    <!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+
+  </header>
+
+
+  <!-- The lab article is the main content area where all the 
+  experiment content sits-->
+  <article id="experiment-article">
+  
+    <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+     <div id="experiment-article-breadcrumb" class="breadcrumb">
+     </div>
+    
+      <header id="experiment-article-heading" class="heading">
+        <!-- You can add a welcome message or title of the 
+        experiment here -->
+        Transition state calcuation for a simple organic chemistry reaction
+        <!-- Add any additional element if required with proper 
+        enclosing-->
+      </header>
+
+      <!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+      <nav id="experiment-article-navigation" class="default">
+        <ul id="experiment-article-navigation-menu">
+          <!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          <li> tag as shown below-->
+        </ul>
+      </nav>
+
+      <!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+      <div id="experiment-article-sections">
+
+        <!-- First section of the article-->
+        <section id="experiment-article-section-1">
+          
+          <div id="experiment-article-section-1-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab -->
+	    <img src="../images/introduction.jpg" />
+	  </div>	
+          
+          <!-- The heading for the section can be enclosed in a 
+          div tag. -->
+          <div id="experiment-article-section-1-heading" 
+          class="heading">
+            Introduction
+          </div>
+
+          <!-- Write the section content inside a paragraph 
+          element, You can also include images with <img> tag -->
+          <div id="experiment-article-section-1-content" 
+          class="content">	
+            
+<p>
+
+       When two (especially organic) molecules approach each other,  there is a possibility of several different chemical reactions between them; each giving different products. Many reactions occur in a single step if the reactants collide with a suffucient energy and specific orientation to form a product. However, many reactions do not occur in a single step but follows multi-steps where it goes  through many intermediate levels in a half-way and finally leads to product. These  intermediate levels are known as transition states. Stabilisation of these transition states is very difficult because these are  highly energetic and unstable species. A chemical reaction may go through many transition states and ultimately leads to the product.The number of  transition states may be different for different reaction path ways for a chemical reaction. There are many different reaction path ways which leads to products from reactants example: Electrophilic reactions, Nucleophilic reactions etc
+</p>
+<p>
+	During these reactions already existing bonds  will break and forms new bonds. SN2 is one of the mechanistic pathway where one nucleophile attacks the center of other molecule and forms the product. The elimination of leaving group and addition of attacking group takes place simultaneously.
+	</p>
+        </div>
+
+
+      </section>
+
+      <!-- Second section of the article-->
+      <section id="experiment-article-section-2">
+        
+        <div id="experiment-article-section-2-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab. -->
+	  <img src="../images/theory.jpg" />
+	</div>
+				
+        <!-- The heading for the section can be enclosed in a 
+        div tag. -->
+        <div id="experiment-article-section-2-heading" 
+        class="heading">
+          Theory
+        </div>
+
+
+        <!-- Write the section content inside a paragraph 
+        element, we can also include images with <img> tag -->
+        <div id="experiment-article-section-2-content" 
+        class="content">
+          <p>
+These mechanisms depends on structure of the reactant and nucleiphile, the solvent, temperature.
+SN2:
+Let's consider transition state in  the reaction between iodomethane and chloride ion.
+</p>
+<div align='center'>
+<p> <img src="sn2.gif"> </p>
+</div>
+<p>
+	
+In the above  substitution reaction, the nucleophile Cl-  attacks the reactant iodomethane and forms a product chloromethane and  leaves I- as leaving group. The intermediatary state where  nucleophile Cl- forms bond and I- breaks bond with the  iodomethane  simultaneously is known as transition state.This mechanism is known as SN2 type and which is stereospecific i.e. Gives a product  inverse in configuration  with the reactant. Usually aprotic solvents like acetone, DMSO, DMF etc favours this reaction. 
+</p>
+        </div>
+      </section>
+
+
+      <section id="experiment-article-section-3">
+        
+        <div id="experiment-article-section-3-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab. -->
+	  <img src="../images/objective.jpg" />
+	</div>
+     
+        <div id="experiment-article-section-3-heading" 
+        class="heading">
+          Objective
+        </div>
+
+        <div id="experiment-article-section-3-content" 
+        class="content">
+        <p>
+         Transition  state  calculations  on
+ SN2 reaction between iodomethane and chloride ion
+ </p>
+
+        </div>
+
+      </section>
+
+
+      <section id="experiment-article-section-4">
+
+        <div id="experiment-article-section-4-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	  <img src="../images/simulation.jpg" />
+	</div>
+
+        <div id="experiment-article-section-4-heading" 
+        class="heading">
+          Experiment
+        </div>
+
+        <div id="experiment-article-section-4-content" 
+        class="content">
+          <p>
+	         <a href="experiment/index.php" target="blank"> Click here to start the experiment</a> 
+          </p>
+        </div>
+
+      </section>
+
+      <section id="experiment-article-section-5">
+   
+        <div id="experiment-article-section-5-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	  <img src="../images/manual.jpg" />
+	</div>
+
+        <div id="experiment-article-section-5-heading" 
+        class="heading">
+          Manual
+        </div>
+
+        <div id="experiment-article-section-5-content" 
+        class="content">
+          <p> 
+           <ol>
+   <li> Select the reactants,transition state and the products to get the actual reaction which is under study. </li>
+    <li>.The inputs of the SN2 reaction i.e., the iodomethane and the chloride ion's input files for GAMESS are considered and upon running GAMESS we get the respective output files i.e., the optimised structures for the inputs of the SN2 reaction. </li>
+     <li>The TS of the SN2 reaction where the chloride ion and the iodide ion are bound to the methyl group is taken as input and upon running GAMESS the transition state is being found. (the TS state is verified upon looking at one imaginary frequency.) </li>
+     <li> The output files i.e., the chloromethane and the iodide ion are being optimised using GAMESS. </li>
+     <li> The energies of the reactants, transition states and the products are being tabulated. </li> 
+     <li> The activation energy(i.e., the difference between the energy of the transition state and that of the reactants) and the reaction energy (i.e., the difference between the energy of the products and that of the reactants) are being calculated. </li> 
+ </ol>
+ </p>
+          </div>
+
+        </section>
+
+        <section id="experiment-article-section-6">
+      
+          <div id="experiment-article-section-6-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/quizzes.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-6-heading" 
+          class="heading">
+            Quizzes
+          </div>
+
+          <div id="experiment-article-section-6-content" 
+          class="content">
+            
+            <form name="qz" onsubmit="return checkAns(this);">
+<p>
+<ol>
+
+  <li> What are the intermediatary states in a chemical reaction? <br>
+        <input type="radio" name="q1" id="q1" value="1"> <font color="green">
+            Nucleophiles 
+        </font> <br>
+        <input type="radio" name="q1" id="q1"value="2"><font color="red"> 
+            Transition states
+         </font> <br> 
+        <input type="radio" name="q1" id="q1"value="3"><font color="black"> 
+             Catalyst
+          </font> <br> 
+        <input type="radio" name="q1" id="q1"value="3"><font color="black">  
+            Water
+          </font> <br> 
+        <br><br> 
+     </li>
+ 
+     <li> In which solvent SN2 reaction proceeds well  <br>
+        <input type="radio" name="q2" id="q2" value="1"> <font color="green"> Ethane </font> <br>
+        <input type="radio" name="q2" id="q2"value="2"><font color="red">  Water</font> <br>
+        <input type="radio" name="q2" id="q2"value="3"><font color="black"> Benzene</font> <br>
+        <input type="radio" name="q2" id="q2"value="4"><font color="blue"> DMSO </font> <br>
+     </li>
+
+     <li> Transition states are very stable <br>
+        <input type="radio" name="q3" id="q3" value="1"> <font color="green"> True </font> <br>
+        <input type="radio" name="q3" id="q3"value="2"><font color="red">  False </font> <br>
+     </li>
+    
+     <li> Is the geometry of the transition state different comapred with reactant <br>
+     <input type="radio" name="q4" id="q4" value="1"> <font color="green"> True </font> <br> 
+        <input type="radio" name="q4" id="q4"value="4"><font color="blue"> False </font> <br>
+     </li>
+
+   <li> Will the solvent play a role in reaction mechanisms <br>
+        <input type="radio" name="q5" id="q5" value="1"> <font color="green"> Yes </font> <br>
+        <input type="radio" name="q5" id="q5"value="2"><font color="red">  No </font> <br>
+        <input type="radio" name="q5" id="q5"value="3"><font color="black"> Can't say </font> <br>
+     </li>
+
+</ol>
+        <br>
+        <p>
+        <input type="submit" value="Submit Answers" class="button">
+        </p>
+        </p>
+        </form>
+
+          </div>
+
+        </section>
+	<!--
+        <section id="experiment-article-section-7">
+	  
+          <div id="experiment-article-section-7-icon" 
+          class="icon">
+	    <img src="../images/procedure.jpg" />
+	  </div>
+	
+          <div id="experiment-article-section-7-heading" 
+          class="heading">
+	    Procedure
+	  </div>
+	
+          <div id="experiment-article-section-7-content" 
+          class="content">
+	    <p>
+	      Procedure for the experiment is as follows.
+	    </p>
+	  </div>
+        </section>
+	-->	
+		
+        <section id="experiment-article-section-8">
+   
+          <div id="experiment-article-section-8-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/readings.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-8-heading" 
+          class="heading">
+            Further Readings
+          </div>
+
+          <div id="experiment-article-section-8-content" 
+          class="content">
+            
+  <ol>
+    <li> Alex A. Granovsky, Firefly version 7.1.G, at <a href="http://classic.chem.msu.su/gran/firefly/index.php">http://classic.chem.msu.su/gran/firefly/index.php </a></li>
+    <li> M.W.Schmidt, K.K.Baldridge, J.A.Boatz, S.T.Elbert, M.S.Gordon, J.H.Jensen, S.Koseki, N.Matsunaga, K.A.Nguyen, S.Su, T.L.Windus, M.Dupuis, J.A.Montgomery J.Comput.Chem. 14, 1347-1363 (1993) </li>
+  </ol>
+          </div>
+
+        </section>
+	        <section id="lab-article-section-6">
+       
+       <div id="lab-article-section-6-icon" class="icon">
+         <!-- Enclose the icon image for the section. -->
+ <img src="../images/manual.jpg" />
+</div>
+
+<!-- The heading for the section can be enclosed in a div tag and shown with a <h2> tag -->
+
+<div id="lab-article-section-6-heading" class="heading">
+Feedback
+</div>
+
+<!-- Write the section content inside a paragraph element, You can also include images with <img> tag -->
+<div id="lab-article-section-6-content" class="content">
+ <p>
+  <ul>
+<li><a href="http://feedback.vlabs.ac.in/feedback/experiment" >Feedback </a></li>
+
+  </ul>
+ </p>
+</div>
+
+     </section>
+      </div>
+
+
+    <!-- An article can have a sidebar that contain related 
+    links and additional material (however it is kept optional 
+    at this moment) -->
+    <aside id="lab-article-sidebar" class="default">
+      <!-- put the content that you want to appear in the 
+      sidebar -->	
+    </aside>
+
+
+    <!-- Article footer can display related content and 
+    additional links -->						
+    <footer id="lab-article-footer" class="default">
+      <!-- Put the content that you want to appear here -->
+    </footer>
+
+  </article>
+
+
+  <!-- Links to other labs, about us page can be kept the lab 
+  footer-->
+ <footer id="lab-footer" class="footer">
+   <!-- Put the content here-->
+<a href="http://virtual-labs.ac.in/nmeict/" >Sponsered by MHRD (NME-ICT) </a> | <a href="http://virtual-labs.ac.in/licensing/" target="_blank"> Licensing Terms </a>
+</footer>
+</div>		
+
+</body>
+</html>

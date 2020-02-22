@@ -1,0 +1,421 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.-->
+
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+<div id="experiment"> <!-- The Experiment Document Container-->
+
+  <!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+
+  <header id="experiment-header" class="default">
+  
+    <div id="experiment-header-logo" class="logo">
+      <!-- Enclose the logo image of your lab or write it in 
+      text-->
+      <img src="../images/logo.jpg" />
+    </div>
+
+    <div id="experiment-header-heading" class="heading">
+      <!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+        <script type="text/javascript" src="../js/MathJax/MathJax.js">
+  </script>
+  <script>
+	var len=2;
+	var Ans = new Array();
+	Ans["q1"]=1;
+	Ans["q2"]=3;
+</script>
+<script type="text/javascript" src="../js/quiz.js">  </script>
+      <a href="../index.php">Quantum chemistry Virtual lab </a>	
+    </div>
+
+    <!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+
+  </header>
+
+
+  <!-- The lab article is the main content area where all the 
+  experiment content sits-->
+  <article id="experiment-article">
+  
+    <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+     <div id="experiment-article-breadcrumb" class="breadcrumb">
+     </div>
+    
+      <header id="experiment-article-heading" class="heading">
+        <!-- You can add a welcome message or title of the 
+        experiment here -->
+        Eigen Systems: Geometrical Interpretation
+        <!-- Add any additional element if required with proper 
+        enclosing-->
+      </header>
+
+      <!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+      <nav id="experiment-article-navigation" class="default">
+        <ul id="experiment-article-navigation-menu">
+          <!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          <li> tag as shown below-->
+        </ul>
+      </nav>
+
+      <!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+      <div id="experiment-article-sections">
+
+        <!-- First section of the article-->
+        <section id="experiment-article-section-1">
+          
+          <div id="experiment-article-section-1-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab -->
+	    <img src="../images/introduction.jpg" />
+	  </div>	
+          
+          <!-- The heading for the section can be enclosed in a 
+          div tag. -->
+          <div id="experiment-article-section-1-heading" 
+          class="heading">
+            Introduction
+          </div>
+
+          <!-- Write the section content inside a paragraph 
+          element, You can also include images with <img> tag -->
+          <div id="experiment-article-section-1-content" 
+          class="content">	
+          <p>
+Numerical computation in Quantum Mechanics (and quantum chemistry, in particular) uses the 
+techniques and language of Linear Algebra, by usage of vectors, matrices and various 
+operations on them.
+</p>
+<p> <br>
+General Motivation: The wave function of a state of the system is typically represented by a vector 
+( for the coefficients) on a basis. The Operators are naturally represented 
+as matrices over this basis. Since all properties are expectation values of the a particular
+operators, we see that we are required to multiply a vector with a matrix. Thus understanding
+matrix operations (on a vector, in particular) becomes paramount for understanding 
+the numerical methodology of quantum mechanics. 
+</p>
+<p><br>
+Application of variational theorem (in the matrix formulation) would require a
+a solution to a set of linear equations; they are of  type 
+\( {\bf A} \vec x = \vec b \), where matrix \( {\bf A }\) and vector \(\vec b\) are 
+known, and a solution for vector \( \vec x \) has to be found. Also, the Schrodinger equation 
+\(\hat H \psi = E \psi \) is also naturally converted to a matrix equation on a basis set 
+\( {\bf H} \vec c = E \vec c \), which is an Eigen System. Understanding the solutions 
+ for such Eigen systems are the main goal of this experiment.
+ </p>
+        </div>
+
+
+      </section>
+
+      <!-- Second section of the article-->
+      <section id="experiment-article-section-2">
+        
+        <div id="experiment-article-section-2-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab. -->
+	  <img src="../images/theory.jpg" />
+	</div>
+				
+        <!-- The heading for the section can be enclosed in a 
+        div tag. -->
+        <div id="experiment-article-section-2-heading" 
+        class="heading">
+          Theory
+        </div>
+
+
+        <!-- Write the section content inside a paragraph 
+        element, we can also include images with <img> tag -->
+        <div id="experiment-article-section-2-content" 
+        class="content">
+        <p>
+          Please see the theory section of the  Molecular Orbital theory, as an example of
+how analysis of linear systems and an eigen system is solved to obtain the electronic structure
+of the molecule/s.
+</p>
+<p><br> A system of linear equations of the type:
+$$ \sum_{j=1}^{N}~ c_{ij} x_j = b x_i, ~for~each~i = 1, 2, \cdots,N$$
+can be written in matrix formulation as:
+$$ {\bf C } {\vec x} = b {\vec x}$$
+where matrix \( {\bf C}\) has elements \(c_{ij}\) is the only known quantity in the equation; both  and \(b\) (which is a is scalar constant) and the vector \(\vec x\) are to be determined. The left hand side of the equation, \( {\bf C} \vec x\) can be thought of as an operation 
+on the vector \( \vec x\), resulting in another vector given by the right hand side \( b \vec x\), which has the same direction as the original vector, but is scaled by a factor \(b\). 
+</p>
+<p><br> Rewriting the above equation, we get
+$$ ({\bf C } - b  {\bf I} ) \vec x = 0 $$
+where \(\bf I\) is the Identity matrix. Consider the case where a product of two scalar 
+quantities equals zero; this would imply that either one or both of the scalars are zero. 
+Similarly, for the case were \( {\bf M } \vec x =0 \), if we ignore the trivial solution 
+\( \vec x =0\), the requirement is that the determinant of \( {\bf M}\) equal zero; i.e. 
+$$ {\bf det~M} = {\bf det} ( {\bf C} -b {\bf I})= 0$$
+where the only unknown quantity is \(b\). This determinant  is a \(N\)-th order polynomial 
+in \(b\), and will have \(N\) solutions for \(b\). Each solution \(b_i\) there exists a vector
+\( \vec v_i\), called eigen vector,  that satisfies the linear equation 
+\(({\bf C } - b  {\bf I} ) \vec v_i = 0\). Note that by convention, the eigen vector is choosen
+to be a unit vector, i.e., \( \vec v_i \cdot \vec v_i = 1\).
+</p>
+<p><br>When the matrix \(\bf C\) is symmetric, we are assured that (Ref: Kreyzig, Chapter 7)
+<ol>
+ <li> the  eigen values \(\lambda_i\) satisfiying the eigen system 
+   \({\bf det} ( {\bf C} -\lambda_i {\bf I})= 0\) are always real. Lets denote  \(\vec v_i\) the eigen vector of this eigen value, \( \lambda_i\).
+  <li> The set of eigen vectors are orthogonal, i.e. the two different eigen vectors are perpendicular to each other, mathematically this means: \( \vec v_i \cdot \vec v_j = \delta_{i,j}\), where \( \delta_{i,j} \) is the Kroneker delta, which is defined to be 1 when \( i = j\) and 0 otherwise. 
+</ol>
+ </p>
+
+<p><br> In the rest of the experiment, we will explore the properties of eigen values and eigen vectors.
+</p>
+        </div>
+      </section>
+
+
+      <section id="experiment-article-section-3">
+        
+        <div id="experiment-article-section-3-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab. -->
+	  <img src="../images/objective.jpg" />
+	</div>
+     
+        <div id="experiment-article-section-3-heading" 
+        class="heading">
+          Objective
+        </div>
+
+        <div id="experiment-article-section-3-content" 
+        class="content">
+        	<p>
+         	To gain geometric and algebraic understanding of eigen system, by manipulation of input vectors and fixed Matrices
+         	</p>
+        </div>
+
+      </section>
+
+
+      <section id="experiment-article-section-4">
+
+        <div id="experiment-article-section-4-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	  <img src="../images/simulation.jpg" />
+	</div>
+
+        <div id="experiment-article-section-4-heading" 
+        class="heading">
+          Experiment
+        </div>
+
+        <div id="experiment-article-section-4-content" 
+        class="content">
+          <p>
+	       <a href="experiment/index.php" target="_blank">Start the Experiment  </a>
+          </p>
+        </div>
+
+      </section>
+
+      <section id="experiment-article-section-5">
+   
+        <div id="experiment-article-section-5-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	  <img src="../images/manual.jpg" />
+	</div>
+
+        <div id="experiment-article-section-5-heading" 
+        class="heading">
+          Manual
+        </div>
+
+        <div id="experiment-article-section-5-content" 
+        class="content">
+    <p>     
+<ol>
+  <li> In the first stage, a matrix \(M\) is given. Note that the matrix is symmetric. 
+The eigen values and eigen vectors of matrix \(M\) are given. 
+In the applet to the right, you will be selecting vector \(P\) and notice the vector \(Q \) displayed, which is the calculated as \(Q = M P\) . Notice the ratio of projections of vector \(Q\) on the eigen vectors. Complete the quiz go to the next stage. 
+  <li> In this stage, you will be selecting vectors \(P\) of same length, and notice the length of the resultant vector \(Q = M P\) .  When is the length of \(Q\) maximum or minimum ?
+</ol> 
+</p>
+          </div>
+
+        </section>
+
+        <section id="experiment-article-section-6">
+      
+          <div id="experiment-article-section-6-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/quizzes.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-6-heading" 
+          class="heading">
+            Quizzes
+          </div>
+
+          <div id="experiment-article-section-6-content" 
+          class="content">
+            
+            <form name="qz" onsubmit="return checkAns(this);">
+<p>
+Let \(\{\lambda_i, i =1,N\}\) and \(\{\vec v_i, i = 1,N\}\) denote the set of eigen values 
+and the corresponding set of eigen vectors for the matrix \({\bf M}\).  
+ For a randomly selected input vector \(P\), let the resultant 
+vector be \(Q= MP\).  
+<p><br>Answer following questions for this eigen system.
+<br>
+<br><b>Q1.</b> All but one of the eigen values are zero. If the input vector 
+\(P\) is a point in \(N\)-dimensional space selected at random, the \(\vec Q\) will be  
+<br>
+<input name="q1" id="q1" value="3" type="radio"> <font color="black">
+a single point </font> <br>
+<input name="q1" id="q1" value="2" type="radio"><font color="black">
+will lie on a single line </font> <br>
+<input name="q1" id="q1" value="1" type="radio"> <font color="black">
+will lie on a plane </font> <br>
+<input name="q1" id="q1" value="0" type="radio"><font color="black">
+None of the above </font> <br>
+<br>
+
+<br><b>Q2.</b> None of the eigen values are zero, and not all of them are equal. 
+If the input vector 
+\(P\) is a point in \(N\)-dimensional space on a sphere, the \(\vec Q\) will be  
+<br>
+<input name="q2" id="q2" value="3" type="radio"> <font color="black">
+a single point </font> <br>
+<input name="q2" id="q2" value="2" type="radio"><font color="black">
+will lie on a single line </font> <br>
+<input name="q2" id="q2" value="1" type="radio"> <font color="black">
+will lie on a sphere </font> <br>
+<input name="q2" id="q2" value="0" type="radio"><font color="black">
+will lie on a ellipse </font> <br>
+<br>
+<br>
+<input value="Submit Answers" type="submit" class="button"> </p>
+</form>
+          </div>
+
+        </section>
+	<!--
+        <section id="experiment-article-section-7">
+	  
+          <div id="experiment-article-section-7-icon" 
+          class="icon">
+	    <img src="../images/procedure.jpg" />
+	  </div>
+	
+          <div id="experiment-article-section-7-heading" 
+          class="heading">
+	    Procedure
+	  </div>
+	
+          <div id="experiment-article-section-7-content" 
+          class="content">
+	    <p>
+	      Procedure for the experiment is as follows.
+	    </p>
+	  </div>
+        </section>
+	-->	
+		
+        <section id="experiment-article-section-8">
+   
+          <div id="experiment-article-section-8-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/readings.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-8-heading" 
+          class="heading">
+            Further Readings
+          </div>
+
+          <div id="experiment-article-section-8-content" 
+          class="content">
+           <ol> 
+     <li> An excellent coverage of the mathematical aspects is available in "Advanced Engineering Mathematics" by E. Kreyzig 8th Edition , Wiley-India Edition (Wiley & Sons). In particular, the following chapters provide reading material for the lab:
+       <ul> 
+        <li> Chapter 6: Linear system of equations
+        <li> Chapter 7: Eigen systems
+       </ul>
+     <li> Wikipedia article on Eigen systems is quite informative of applications in various fields of science and engineering: <a href="http://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors" target="_blank">http://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors</a>
+    </ol>
+     
+          </div>
+
+        </section>
+	        <section id="lab-article-section-6">
+       
+       <div id="lab-article-section-6-icon" class="icon">
+         <!-- Enclose the icon image for the section. -->
+ <img src="../images/manual.jpg" />
+</div>
+
+<!-- The heading for the section can be enclosed in a div tag and shown with a <h2> tag -->
+
+<div id="lab-article-section-6-heading" class="heading">
+Feedback
+</div>
+
+<!-- Write the section content inside a paragraph element, You can also include images with <img> tag -->
+<div id="lab-article-section-6-content" class="content">
+ <p>
+  <ul>
+<li><a href="http://feedback.vlabs.ac.in/feedback/experiment" >Feedback </a></li>
+
+  </ul>
+ </p>
+</div>
+
+     </section>
+      </div>
+
+
+    <!-- An article can have a sidebar that contain related 
+    links and additional material (however it is kept optional 
+    at this moment) -->
+    <aside id="lab-article-sidebar" class="default">
+      <!-- put the content that you want to appear in the 
+      sidebar -->	
+    </aside>
+
+
+    <!-- Article footer can display related content and 
+    additional links -->						
+    <footer id="lab-article-footer" class="default">
+      <!-- Put the content that you want to appear here -->
+    </footer>
+
+  </article>
+
+
+  <!-- Links to other labs, about us page can be kept the lab 
+  footer-->
+ <footer id="lab-footer" class="footer">
+   <!-- Put the content here-->
+<a href="http://virtual-labs.ac.in/nmeict/" >Sponsered by MHRD (NME-ICT) </a> | <a href="http://virtual-labs.ac.in/licensing/" target="_blank"> Licensing Terms </a>
+</footer>
+</div>		
+
+</body>
+</html>

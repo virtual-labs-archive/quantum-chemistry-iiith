@@ -1,0 +1,163 @@
+<script type='text/javascript' src='../js/MathJax/MathJax.js'></script>
+
+<h1 id="main-title">
+Vib-rotational Spectroscopy of Hydrogen Chloride
+</h1>
+
+<div id="introduction">
+<h2>Introduction</h2>
+
+<p>
+A diatomic molecule has additional degrees of freedom when compared 
+to an atom because it has the ability to rotate and vibrate about its center of mass; see below
+figure for illustraion of forces and hence torque on a molecule placed in external electromagnetic field.
+<div align='center'>
+<p> <img src="images/diprot.gif"> </p>
+<p> <img src="images/rotlev.gif"> </p>
+</div>
+</p><p>The above figure shows that for every electronic state, 
+several vibrational states are associated with it. 
+Additionally, for every vibrational state,  several rotational states are associated with it.
+</p><br>
+
+The electromagnetic waves excite the rotational levels of molecules (provided 
+the molecule has dipole moment), thereby exerting a torque on the molecule.
+The frequencies of EM radiation absorbed or emitted by a transition between 
+the rotational energy states or the vibrational energy states will lie in 
+microwave \(\nu \lt 1011~{\rm Hz},~\lambda \gt 20~\mu m\)
+  or infrared regions  \(\nu \gt 1013~{\rm Hz},~\lambda \lt 20~ \mu m\) 
+of the EM spectrum. From the rotation part of the IR spectrum, 
+we can calculate the bond length of a diatomic molecule.
+From the vibration part of the IR spectrum, we can calculate 
+the bond force constant of the diatomic molecule.
+
+</div>
+
+<div id="objective">
+<h2>Objective</h2>
+To calculate structural properties of diatomic molecules 
+(bond force constant and bond length) from IR spectra.
+</div>
+
+<div id="theory"> <h2>Theory</h2>
+<p>
+The vibrational transitions of a diatomic molecule in its electronic ground 
+state can be approximated to a Simple Harmonic Oscillator (SHM). The rotational 
+transitions can be approximated to a rigid rotor.
+</p>
+In this lab, please distinguish between \(\nu\) (spelled 'nu') and \(v\) (alphabet 'v'). 
+While the \(\nu\) is used to denote the frequency, the symbol \(v\) is used to denote 
+the vibrational quantum number.
+<h4>Selection rule:</h4>
+<ul>
+   <li> For vibrational transitions: The molecule should have a dipole moment. 
+	\( \Delta v = \pm 1, \pm 2, .. \), where \(v\) is the vibrational quantum number. </li>
+    <li> For rotational transitions: \(\Delta J= \pm1\), where \(J\) is the rotational 
+	quantum number. </li>
+</ul> <br>
+
+<h4>Spectrum identification:</h4>
+<img src="images/spectrum.gif">
+
+<ul>
+  <li>The P-branch corresponds to all transitions where \(\Delta  J=-1\)</li>
+  <li>The R-branch corresponds to all transitions where \(\Delta J=+1\)</li>
+  <li>The Q-branch corresponds to all transitions where \(\Delta J=0\)</li>
+<br>
+
+<h4>Calculation of Bond force constant:</h4>
+
+<img src="images/qhar.gif">
+<p>The transition frequency (\(\nu\)) between the vibrational levels is related to the molecular parameters by </p>
+$$\nu = 2 \pi \omega$$
+<p> 
+where \(\omega\) is given by
+<p>
+$$ E_v = \left(v + \frac{1}{2}\right)\hbar \omega, ~~~~~ 
+\omega= \left(\frac{k}{m_{eff}}\right)^{1/2}, ~~~~~v=0,1,2,3, \cdots $$
+</p>
+
+Where \(m_{eff}\) (reduced mass) is given by
+<p>
+$$ m_{eff} = \frac{m_1 m_2}{m_1 + m_2} $$
+</p>
+
+
+\(E_v\) is permitted energy levels.
+The value of \(\omega\) is obtained from the IR spectra. Substituting the value of 
+\(m_{eff}\) we get the bond force constant.
+
+<h4>Calculation of Bond length:</h4>
+The rotational energy is given by
+$$E_J= B J (J+1),~~~~~~~		J=0, 1, 2,\dots$$
+where rotational constant \(B\), is given by
+$$B= \hbar^2/2I$$
+where \(I\), the moment of inertia is given by
+$$I= m_{eff} R^2$$
+where \(m_{eff}\) is the reduced mass.
+The separation between the two illustrated vibration-rotation transitions 
+is assumed to be twice the rotational energy change from \(j=0\) to \(j=1\).
+$$ 2 \Delta E_J = \hbar \omega$$
+The value of \(\omega\) is obtained from the IR spectra. We get the moment of 
+inertia from the above equations and substituting \(m_{eff}\) in the moment 
+of inertia equation, we get the bond length.
+
+</div>
+
+<div id="manual">
+<h2>Manual</h2>
+<ol>
+  <li> Select the diatomic molecule </li>
+  <li> Click on the tab "GET IR SPECTRA" </li>
+  <li> Select the right peak corresponding to P1 and R0 </li>
+  <li> Measure the distance between them </li>
+  <li> Find the midpoint of the peaks </li>
+  <li> From the above two values you can calculate force constant and bond length </li>
+</ol>
+</div>
+
+<div id="experiment">
+<h2>Experiment</h2>
+
+<a href="exp6/exp6.html"> Click here to start the experiment</a>
+
+</div>
+
+<div id="quiz">
+<h2>Quiz</h2>
+<p>
+<ol>
+    <li> Which of the following molecule does NOT exhibit infrared spectra  <br>
+        <input type="radio" name="q5" id="q5" value="1"> <font color="green"> HCl</font> <br>
+        <input type="radio" name="q5" id="q5"value="2"><font color="red"> CO </font> <br> 
+        <input type="radio" name="q5" id="q5"value="3"><font color="black"> N<sub>2</sub> </font> <br> 
+        <input type="radio" name="q5" id="q5"value="4"><font color="blue"> HBr </font> 
+        <br><br> 
+     </li>
+    <li>Formula for calculating reduced mass of two atoms (of mass \(m_1\) and \(m_2\)) is:  <br>
+        <input type="radio" name="q5" id="q5" value="1"> <font color="green"> \(m_1+m_2 \) </font> <br>
+        <input type="radio" name="q5" id="q5"value="2"><font color="red">     \(\frac{1}{m_1} +\frac{1}{m_2}\) </font> <br><br>
+        <input type="radio" name="q5" id="q5"value="3"><font color="black"> \(\sqrt{m_1 m_2}\)</font> <br><br>
+        <input type="radio" name="q5" id="q5"value="4"><font color="blue"> \( \frac{1}{\frac{1}{m_1} +\frac{1}{m_2}}\) </font> <br><br>
+     </li>
+     <li> Which one of the following molecular activity results in Infrared and Microwave spectra respectively: <br>
+        <input type="radio" name="q5" id="q5" value="1"> <font color="green"> Rotation & Vibration</font> <br>
+        <input type="radio" name="q5" id="q5" value="2"><font color="red"> Vibration & Rotation </font> <br> 
+        <input type="radio" name="q5" id="q5" value="3"><font color="black"> Ionization & Rotation </font> <br> 
+        <input type="radio" name="q5" id="q5" value="4"><font color="blue"> Vibration & Ionization </font> 
+     </li>
+     <li> Vibrational energies are large compared to rotational energies: <br>
+         <input type="radio" name="q5" id="q5" value="1"><font color="green"> True </font> <br>
+         <input type="radio" name="q5" id="q5" value="0"><font color="blue"> False</font> <br>
+     </li>
+     <li> \(\Delta J = +1\) corresponds to P branch. <br>
+         <input type="radio" name="q5" id="q5" value="1"><font color="green"> True </font> <br>
+         <input type="radio" name="q5" id="q5" value="0"><font color="blue"> False</font> <br>
+      </li>   
+
+</ol>
+        <input type="submit" value="Submit Answers">
+        </p>
+
+
+</div>

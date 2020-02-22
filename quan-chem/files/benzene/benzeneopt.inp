@@ -1,0 +1,28 @@
+ $CONTRL RUNTYP=OPTIMIZE COORD=ZMT UNITS=ANGS $END
+ $BASIS  GBASIS=N31 NGAUSS=6 NDFUNC=1 $END
+ $DATA
+6-31g(d)/ Benzene optimization
+Dnh 6
+
+C
+C     1    rCC
+C     2    rCC       1    a
+C     3    rCC       2    a        1    d1 
+C     4    rCC       3    a        2    d2 
+C     1    rCC       2    a        3    d2 
+H     1    rCH       6    a        5    d3 
+H     2    rCH       1    a        6    d4 
+H     3    rCH       2    a        1    d4 
+H     4    rCH       3    a        2    d3 
+H     5    rCH       4    a        3    d3 
+H     6    rCH       1    a        2    d4 
+
+rCC=1.39                     
+rCH=1.09                     
+a=120                       
+d1=0                       
+d2=0                       
+d3=-180                       
+d4=180                       
+ $END
+

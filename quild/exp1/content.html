@@ -1,0 +1,563 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.-->
+
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+<meta charset="utf-8">
+<script src="../js/mathscribe/jquery-1.4.3.min.js"></script>
+<script src="../js/mathscribe/jqmath-etc-0.2.0.min.js"></script>
+-->
+</head>
+<body>
+<div id="experiment"> <!-- The Experiment Document Container-->
+
+  <!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+
+  <header id="experiment-header" class="default">
+  
+    <div id="experiment-header-logo" class="logo">
+      <!-- Enclose the logo image of your lab or write it in 
+      text-->
+      <img src="../images/logo.jpg" />
+    </div>
+
+    <div id="experiment-header-heading" class="heading">
+      <!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+	<script type="text/javascript" src="../js/MathJax/MathJax.js">  </script>
+	<script>
+		var len=8;
+		var Ans = new Array();
+		Ans["q1"]=0;
+		Ans["q2"]=1;
+		Ans["q3"]=1;
+		Ans["q4"]=0;
+		Ans["q5"]=2;
+		Ans["q6"]=1;
+		Ans["q7"]=0;
+		Ans["q8"]=0;
+
+	</script>
+	<script type="text/javascript" src="../js/quiz.js">  </script>
+      <a href="../index.php">Quantum chemistry Virtual lab</a>	
+    </div>
+
+    <!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+
+  </header>
+
+
+  <!-- The lab article is the main content area where all the 
+  experiment content sits-->
+  <article id="experiment-article">
+  
+    <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+     <div id="experiment-article-breadcrumb" class="breadcrumb">
+     </div>
+    
+      <header id="experiment-article-heading" class="heading">
+        <!-- You can add a welcome message or title of the 
+        experiment here -->
+        Geometry Optimization of Molecules
+        <!-- Add any additional element if required with proper 
+        enclosing-->
+      </header>
+
+      <!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+      <nav id="experiment-article-navigation" class="default">
+        <ul id="experiment-article-navigation-menu">
+          <!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          <li> tag as shown below-->
+        </ul>
+      </nav>
+
+      <!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+      <div id="experiment-article-sections">
+
+        <!-- First section of the article-->
+        <section id="experiment-article-section-1">
+          
+          <div id="experiment-article-section-1-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab -->
+	    <img src="../images/introduction.jpg" />
+	  </div>	
+          
+          <!-- The heading for the section can be enclosed in a 
+          div tag. -->
+          <div id="experiment-article-section-1-heading" 
+          class="heading">
+            Introduction
+          </div>
+
+          <!-- Write the section content inside a paragraph 
+          element, You can also include images with <img> tag -->
+          <div id="experiment-article-section-1-content" 
+          class="content">	
+		<p>
+
+			Optimization is the process of selecting the best from a set of
+			alternatives. Optimization is performed for function that is
+			multi-variable, continuous and differentiable, and typical optimization
+			techniques find minima or maxima of the function.
+		</p>
+		<p>
+			In nature, molecules are most likely to be found in those
+			conformations which are most stable (energy minimum). The potential
+			energy surface (PES) of the molecular configuration is first computed
+			using quantum mechanics. Each local minima on the on this PES
+			represents a stable conformation, and a "movie" of the molecule will
+			show that most of the time the molecule spends near these locally
+			stable conformations with sudden jumps to nearby stable conformations,
+			with the rate that depends on the energy barrier of such a jump. If one
+			of the stable conformations is significantly more stable then the
+			molecule will be trapped in that conformation and geometry. Or if the
+			stable conformations are separated by large barriers, the molecule will
+			be trapped in whatever stable conformation that is achieved first. <br>
+		</p>
+		<p>
+			PES is a hyper-surface showing the energy of a particular conformation	.
+			This many dimensional hyper-surface can be characterized by points where
+			the gradient is zero, which can be classified into following
+			categories:
+			<ol>
+			  <ol>
+			    <li>
+			    	Local Maxima: a point on the hyper-surface that has the highest
+				function value in its near neighborhood; <br/>all nearby points have lower
+				values. A hyper-surface will have very many local maxima, in general. 
+			    </li>
+			    <li>
+			    	Local Minima: a point on the hyper-surface that has the lowest
+				function value in its near neighborhood;<br/> all nearby points have higher
+				values. A hyper-surface will have very many local minima, in general.
+			    </li>
+			    <li>
+			    	Global Maxima: From the set of points which are local maxima,
+				it is that point that has the highest function value. <br/>A hyper-surface
+				can have only one global maxima.
+			    </li>
+			    <li>
+			    	Global Minima: From the set of points which are local minima,
+				it is that point that has the lowest function value.<br/> A hyper-surface can
+				have only one global minima.
+			    </li>
+			    <li>
+			    	Saddle point: A point on the hyper-surface which has minimum in
+				at least one direction and maximum other directions;<br/> the conformation
+				at the saddle point represents the transition structure between two
+				stable conformations.
+			   </li>
+			 </ol>
+                     </ol>
+		</p>
+		<p>
+			To identify the stable conformations, local minima of the PES need
+			to be computed. This is called Geometry Optimization and is used to: 
+			<ol>
+			  <ol>
+			    <li> Characterize a potential energy surface</li>
+			    <li> Obtain a structure for a single-point quantum mechanical
+                                 calculation, which provides a large set of structural and electronic
+                                 properties for the stable conformation.
+                            </li>
+			    <li>Prepare a structure for molecular dynamics simulation (if the
+				forces on atoms are too large, the integration algorithm <br/>may fail; so
+				starting the simulation at stable conformation is crucial).
+			     </li>
+			  </ol>
+			</ol> 
+               </p>
+               <br/><br/>
+        </div>
+
+      </section>
+
+      <!-- Second section of the article-->
+      <section id="experiment-article-section-2">
+        
+        <div id="experiment-article-section-2-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab. -->
+	  <img src="../images/theory.jpg" />
+	</div>
+				
+        <!-- The heading for the section can be enclosed in a 
+        div tag. -->
+        <div id="experiment-article-section-2-heading" 
+        class="heading">
+          Theory
+        </div>
+
+
+        <!-- Write the section content inside a paragraph 
+        element, we can also include images with <img> tag -->
+        <div id="experiment-article-section-2-content" 
+        class="content">
+          <p>
+		  Let the state of the system be represented by a vector \(\bf x\). For the 
+		  mathematical convenience, below, a vector will be represented by a "column 
+		  matrix" (a matrix which has only one row); i.e. \( \vec v = {\bf v}\). For this 
+		  vector (column matrix ), the transpose is a row matrix represented as \( {\bf v}^T\).
+	  </p>
+		<h3>STEEPEST DESCENT METHOD:</h3>
+	<p>
+		Suppose that we want to find a local minimum for the
+		scalar function \(f\) of the vector variable \({\bf x}\), 
+		\(f \equiv f({\bf x})\) starting from an initial point \({\bf x}_0\). 
+		Picking an appropriate \({\bf x}_0\) is crucial, but also
+		 very problem-dependent. We start from  \({\bf x}_0\) and we go downhill.
+	</p> 
+	<p>
+		The choice of direction is where function \(f\) decreases 
+		most quickly, which is in the direction opposite to 
+		the gradient of the function, that is \( - \nabla f ({\bf x})\).
+		The search starts at an arbitrary point 
+		\({\bf x}_0\)
+		 and 
+		 then slides down the gradient, till we are close enough
+		 to the solution. In other words, the iterative   procedure is
+		 $$ {\bf x}_{k+1} = {\bf x}_k - \lambda_k \nabla f({\bf x}_k) \implies {\bf x}_{k+1}= {\bf x}_k - \lambda_k g({\bf x}_k )$$
+		 where  \(g( {\bf x}_k)\) 
+		 is the gradient at point \({\bf x}_k\), where \(\lambda_k\) is a small positive number.  
+	 </p>
+	 	<h3>Technical</h3>
+	 <p>
+		 From point \({\bf x}_k\), we want to move to the point 
+		 \({\bf x}_{k+1}\), in the direction 
+		of gradient were the function \(f\)  takes on a minimum value 
+		along this direction. So, the directional derivative is given by <br>
+		$$ \frac{ d f(x_{k+1})}{d\lambda_k} = \left( \nabla f(x_{k+1})\right)^T \cdot \frac{d x_{k+1}}{d\lambda_k} = - \left( \nabla f(x_{k+1})\right)^T \cdot g(x_k)$$
+		Setting this expression to zero, we see that \(\lambda_k\)
+		should be chosen so that \( \nabla f({\bf x}_{k+1}) \)
+		and  \(g({\bf x}_k)\)   are orthogonal. 
+		The next step is then taken in the direction of the
+		 negative gradient at this new point. This iteration 
+		 continues until the extremum has been determined.
+	</p>
+		<h3>NEWTON-RAPHSON METHOD:</h3>
+		
+	<p>
+		Newton-Raphson method is one of the iterative optimization 
+		methods. In this method, the curve is approximated to
+		a parabola around the neighborhood of point \({\bf x}_0\) by Taylor expansion as: 
+		$$ f({\bf x}_0 + {\bf x}) = f({\bf x}_0) + \left( \nabla f({\bf x}_0) \right)^T \cdot {\bf x} + \frac{1}{2}
+		  {\bf x}^T\cdot {\bf H}({\bf x}_0) \cdot {\bf x} $$
+		  where the Hessian Matrix \({\bf H}\) for a function \(f\equiv f({\bf x})\) 
+		spanning a \(N\)-dimensional space (i.e., \({\bf x} = (x_1,x_2,x_3,\dots, x_N)\)), is given by:
+		$$
+		{\bf H\left(f({\bf x}_0)\right)} = \left[\frac{\partial^2 f}{\partial x_i \partial x_j}\right] = \begin{vmatrix}
+		\frac{\partial^2 f}{\partial x_1 \partial x_1} &   \frac{\partial^2 f}{\partial x_1 \partial x_2}                   & .  & \frac{\partial^2 f}{\partial x_1 \partial x_N} \\
+		 \frac{\partial^2 f}{\partial x_2 \partial x_1}&  \frac{\partial^2 f}{\partial x_2 \partial x_2} &    &  \frac{\partial^2 f}{\partial x_2 \partial x_N}          \\
+		. & .  & .   &      .     \\
+		 \frac{\partial^2 f}{\partial x_N \partial x_1}&  \frac{\partial^2 f}{\partial x_N \partial x_2} &    &      \frac{\partial^2 f}{\partial x_N \partial x_N} 
+		\end{vmatrix}_{{\bf x}_0}
+		$$
+		and the vertex of this parabola 
+		  is taken to be approximation 
+		  to the extremum, and thus the value passed on to the next iteration. The vertex is determined by setting the 
+		  derivative to be zero for the above Taylor's expansion; to obtain  
+		  \( {\bf x} = - {\bf H}^{-1} \cdot \nabla f({\bf x}_0)\), which gives the 
+		  estimated position of the extremum to be at \({\bf x}_0 + {\bf x} = {\bf x}_0  - {\bf H}^{-1} \cdot \nabla f({\bf x}_0)\). It is generally found from experience that following iteration
+		 works better,  
+			  $$ {\bf x}_{n+1} = {\bf x}_n - \gamma \left[ {\bf H}(f({\bf x}_n)) \right]^{-1} 
+			  \cdot \nabla f({\bf x}_n)$$ 
+			  where \(\lambda\) is in the range \( (0,1]\) instead of \(\gamma =1\) as suggested by the the analysis.
+			  
+	</p>
+
+			<h3>Technical:</h3>
+	<p>
+		 To avoid divergence or oscillating problems, keep 
+		the number of iterations constant. At each step, Hessian
+		 matrix must be calculated and inverted. The Hessian
+		 matrix of second derivatives must be positive definite
+		 in Newton-Raphson minimization. Positive definite matrix
+		 is one for which all eigen values are positive. When Hessian 
+		 matrix is not positive definite, then the Newton-Raphson
+		  method moves to the saddle point.
+        </p>
+	<br/><br/>
+        </div>
+      </section>
+
+
+      <section id="experiment-article-section-3">
+        
+        <div id="experiment-article-section-3-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab. -->
+	  <img src="../images/objective.jpg" />
+	</div>
+     
+        <div id="experiment-article-section-3-heading" 
+        class="heading">
+          Objective
+        </div>
+
+        <div id="experiment-article-section-3-content" 
+        class="content">
+          <p>
+            Understand and learn (a) steepest descent and (b) <span class="term">Newton-Raphson methods</span> to find the minima/maxima.
+          </p> 
+
+        </div>
+
+      </section>
+
+
+      <section id="experiment-article-section-4">
+
+        <div id="experiment-article-section-4-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	  <img src="../images/simulation.jpg" />
+	</div>
+
+        <div id="experiment-article-section-4-heading" 
+        class="heading">
+          Experiment
+        </div>
+
+        <div id="experiment-article-section-4-content" 
+        class="content">
+          <p>
+	   <div style="text-align:center">
+	   	<h1>Optimization Methods</h1>
+	   <br/><br/><br/>
+		<h3><a href="nr.html" >Newton-Raphson Method  </a></h3>
+		<br/><br/>
+		<h3><a href="sd.html" >Steepest Decent Method</a></h3>
+	   </div>
+          </p>
+        </div>
+
+      </section>
+
+      <section id="experiment-article-section-5">
+   
+        <div id="experiment-article-section-5-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	  <img src="../images/manual.jpg" />
+	</div>
+
+        <div id="experiment-article-section-5-heading" 
+        class="heading">
+          Manual
+        </div>
+
+        <div id="experiment-article-section-5-content" 
+        class="content">
+        <p>
+		Step by step details of the experiment:
+		<div style="padding-left:30px">
+			<ol>
+				<li>From the main page choose one of the optimization methods.</li>
+				<li>Now select one of the displayed molecules for geometric
+				optimization.</li>
+				<li>In the first stage of optimization, the algorithm is
+				''constructed'' by clicking on the appropriate buttons at the bottom
+				left of the screen. <br>
+				</li>
+				<li>In the second stage, the values for various parameters are set:<br>
+				</li>
+			<ol  style="list-style-type: lower-alpha;">
+				<li>Choose the position by clicking the "Choose X" and then
+				pointing and clicking on the graph where the point is to be located.</li>
+				<li>Variables like "Step Size" can be changed within the preset
+				range of values by repeatedly clicking its button.</li>
+				<li>By clicking the ''Repeat'' button, one iteration is
+				performed. The new position and the structure that corresponds to it are
+				displayed.</li>
+			</ol>
+				<li>Please note the value of the minima that you have obtained.<br>
+				</li>
+			</ol>
+		</div>
+		</p>
+          </div>
+
+        </section>
+
+        <section id="experiment-article-section-6">
+      
+          <div id="experiment-article-section-6-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/quizzes.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-6-heading" 
+          class="heading">
+            Quizzes
+          </div>
+          <div id="experiment-article-section-6-content" 
+          class="content">
+	   <form name="qz" onsubmit="return checkAns(this);">
+            <p>
+               <b>Q1.</b> A function or potential energy surface can have multiple global minima or maxima.<br>
+	        <input type="radio" name="q1" id="q1" value="1" > <font color="green"> True </font> <br>
+	        <input type="radio" name="q1" id="q1" value="0" ><font color="red"> False </font> <br/><br/>
+	        <b>Q2.</b> The gradient of a function points in the direction of minima or descent. <br>
+	        <input type="radio" name="q2" id="q2" value="1"> <font color="green"> True </font> <br>
+	        <input type="radio" name="q2" id="q2"value="0"><font color="red"> False </font> <br/><br/>
+	        <b>Q3.</b> Picking of initial point \(x_0\) and step size chosen in the Steepest Descent method does not affect or matter in the optimization process. <br>
+	        <input type="radio" name="q3" id="q3" value="1"> <font color="green"> True </font> <br>
+	        <input type="radio" name="q3" id="q3"value="0"><font color="red"> False </font> <br/><br/>
+               <b>Q4.</b> Newton-Raphson method converges quadratically. <br>
+	        <input type="radio" name="q4" id="q4" value="1"> <font color="green"> True </font> <br>
+	        <input type="radio" name="q4" id="q4" value="0"><font color="red"> False </font> <br/><br/>
+	        <b>Q5.</b> Newton-Raphson method can converge to (a) minima (b) maxima (c) saddle point. <br>
+	        <input type="radio" name="q5" id="q5" value="1"> <font color="green"> Minima alone</font> <br>
+	        <input type="radio" name="q5" id="q5"value="2"><font color="red"> Either Maxima or minima but not saddle point </font> <br/>
+	        <input type="radio" name="q5" id="q5"value="3"><font color="blue"> All of the three: maxima, minima and saddle point </font> <br/><br/>
+	        <b>Q6.</b> Newton-Raphson optimization a one variable function always converges to the solution.  <br>
+	        <input type="radio" name="q6" id="q6" value="1"> <font color="green"> True </font> <br>
+	        <input type="radio" name="q6" id="q6"value="0"><font color="red"> False </font> <br/><br/>
+	        <b>Q7.</b> Steepest Descent method always converges to a solution.  <br>
+	        <input type="radio" name="q7" id="q7" value="1"> <font color="green"> True </font> <br>
+	        <input type="radio" name="q7" id="q7"value="0"><font color="red"> False </font> <br/><br/>
+	            <b>Q8.</b> The iteration step in the Newton-Raphson's method might fall in infinite loop, in case of oscillating solution. <br>
+	        <input type="radio" name="q8" id="q8" value="1"> <font color="green"> True </font> <br>
+	        <input type="radio" name="q8" id="q8"value="0"><font color="red"> False </font> <br/><br/>
+	        <input type="submit" value="Submit Answers" class="button">
+
+            </p>
+            	</form>
+
+          </div>
+
+        </section>
+	<!--
+        <section id="experiment-article-section-7">
+	  
+          <div id="experiment-article-section-7-icon" 
+          class="icon">
+	    <img src="../images/procedure.jpg" />
+	  </div>
+	
+          <div id="experiment-article-section-7-heading" 
+          class="heading">
+	    Procedure
+	  </div>
+	
+          <div id="experiment-article-section-7-content" 
+          class="content">
+	    <p>
+	      Procedure for the experiment is as follows.
+	    </p>
+	  </div>
+	
+        </section>
+	-->	
+		
+        <section id="experiment-article-section-8">
+   
+          <div id="experiment-article-section-8-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/readings.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-8-heading" 
+          class="heading">
+            Further Readings
+          </div>
+
+          <div id="experiment-article-section-8-content" 
+          class="content">
+            <ul>	
+              <li>
+                <a href="http://en.wikipedia.org/wiki/
+                Simple_harmonic_motion">http://en.wikipedia.org/wiki/Simple_harmonic_motion</a>
+              </li>
+              <li>
+                <a href="http://www.physics.uoguelph.ca/
+                tutorials/shm/Q.shm.html">http://www.physics.uoguelph.ca/tutorials/shm/Q.shm.html</a>
+              </li> 
+              <li>
+                Dynamics of structures by Anil K chopra. 
+              </li> 
+              <li>
+                <a href="http://surendranath.tripod.com/Applets/
+                Oscillations/SHM/SHMApplet.html">http://surendranath.tripod.com/Applets/Oscillations/SHM/SHMApplet.html</a> 
+              </li>
+            </ul>
+          </div>
+
+        </section>
+        <section id="lab-article-section-6">
+       
+       <div id="lab-article-section-6-icon" class="icon">
+         <!-- Enclose the icon image for the section. -->
+ <img src="../images/manual.jpg" />
+</div>
+
+<!-- The heading for the section can be enclosed in a div tag and shown with a <h2> tag -->
+
+<div id="lab-article-section-6-heading" class="heading">
+Feedback
+
+</div>
+
+<!-- Write the section content inside a paragraph element, You can also include images with <img> tag -->
+<div id="lab-article-section-6-content" class="content">
+ <p>
+  <ul>
+<li><a href="http://feedback.vlabs.ac.in/feedback/experiment" >FeedBack</a></li>
+  </ul>
+ </p>
+</div>
+
+     </section>
+
+      </div>
+
+
+    <!-- An article can have a sidebar that contain related 
+    links and additional material (however it is kept optional 
+    at this moment) -->
+    <aside id="lab-article-sidebar" class="default">
+      <!-- put the content that you want to appear in the 
+      sidebar -->	
+    </aside>
+
+
+    <!-- Article footer can display related content and 
+    additional links -->						
+    <footer id="lab-article-footer" class="default">
+      <!-- Put the content that you want to appear here -->
+    </footer>
+
+  </article>
+
+
+  <!-- Links to other labs, about us page can be kept the lab 
+  footer-->
+<footer id="lab-footer" class="footer">
+   <!-- Put the content here-->
+<a href="http://virtual-labs.ac.in/nmeict/" >Sponsered by MHRD (NME-ICT) </a> | <a href="http://virtual-labs.ac.in/licensing/" target="_blank"> Licensing Terms </a>
+</footer>
+
+</div>		
+
+</body>
+</html>
