@@ -1,14 +1,8 @@
 <!-- This file needs to be edited by the lab developer to suit
-the requirements of their lab in particular.-->
-
-<!-- Add class="default" to include any element as it is
+the requirements of their lab in particular.--><!-- Add class="default" to include any element as it is
 specified in default.html. 
 Do not include class="default" to the elements that you want to
-edit -->
-
-<!DOCTYPE html>
-<html>
-<head></head>
+edit --><!DOCTYPE html><html><head></head>
 <body>
 
 <div id="experiment"> <!-- The Experiment Document Container-->
@@ -21,7 +15,7 @@ edit -->
     <div id="experiment-header-logo" class="logo">
       <!-- Enclose the logo image of your lab or write it in 
       text-->
-      <img src="../images/logo.jpg" />
+      <img src="../images/logo.jpg">
     </div>
 
     <div id="experiment-header-heading" class="heading">
@@ -85,23 +79,20 @@ edit -->
         <!-- First section of the article-->
         <section id="experiment-article-section-1">
           
-          <div id="experiment-article-section-1-icon" 
-          class="icon">
+          <div id="experiment-article-section-1-icon" class="icon">
 	    <!-- Enclose the icon image of your lab -->
-	    <img src="../images/introduction.jpg" />
+	    <img src="../images/introduction.jpg">
 	  </div>	
           
           <!-- The heading for the section can be enclosed in a 
           div tag. -->
-          <div id="experiment-article-section-1-heading" 
-          class="heading">
+          <div id="experiment-article-section-1-heading" class="heading">
             Introduction
           </div>
 
           <!-- Write the section content inside a paragraph 
           element, You can also include images with <img> tag -->
-          <div id="experiment-article-section-1-content" 
-          class="content">
+          <div id="experiment-article-section-1-content" class="content">
           <p>	
              In 1931, E. Huckel proposed molecular orbital theory, in which molecular orbitals are approximated
    using linear combination of atomic ortibals (LCAO) for \(\pi\)-conjugated systems. This approximation
@@ -123,24 +114,21 @@ edit -->
       <!-- Second section of the article-->
       <section id="experiment-article-section-2">
         
-        <div id="experiment-article-section-2-icon" 
-        class="icon">
+        <div id="experiment-article-section-2-icon" class="icon">
 	  <!-- Enclose the icon image of your lab. -->
-	  <img src="../images/theory.jpg" />
+	  <img src="../images/theory.jpg">
 	</div>
 				
         <!-- The heading for the section can be enclosed in a 
         div tag. -->
-        <div id="experiment-article-section-2-heading" 
-        class="heading">
+        <div id="experiment-article-section-2-heading" class="heading">
           Theory
         </div>
 
 
         <!-- Write the section content inside a paragraph 
         element, we can also include images with <img> tag -->
-        <div id="experiment-article-section-2-content" 
-        class="content">
+        <div id="experiment-article-section-2-content" class="content">
         <p>
          In Molecular Orbital Theory, one popular approximation is that of  Linear Combination of Atomic Orbitals
    for Molecuar Orbitals (LCAO-MO), which can be mathematically represented as
@@ -152,7 +140,7 @@ edit -->
    of the molecular Hamiltonian \(\hat H\).
 </p>
    <p>
-   Use of variational principle to solve for this eigen system: <p>
+   Use of variational principle to solve for this eigen system: </p><p>
    We know that the energy of the wave function \(\psi\) is given by 
    $$E = \frac {\int \psi^* \hat H \psi~d\tau } { \int \psi^* \psi~d\tau } $$ 
    which depends on the vaules of the coffecients \(\{c_i, i = 1,\cdots , N\} \).  
@@ -190,56 +178,53 @@ Clealy, the unique solutions exists if and only if \( {\bf det} \left( {\bf H} -
 </p>
 <p>
 Huckel's approximation resulting in Huckel's Molecular Orbital Theory: 
-<ul> 
+</p><ul> 
 <li> When the moleclues are planar, the \(\sigma\) bond orbitals and the \(\pi\) bond orbitals are perpendicular to each other (more specifically, \(\sigma\) bond orbitals lie completely in the plane, and the \(\pi\) bond orbitals lie perpenduclar to this plane). So assuming that the 
 \(\sigma\) bonds are already formed, look at the electronic struture of the \( \pi \) bonds alone. 
-<li>So essentially, each atom in the conjugated system contributes one \(\pi\) orbital, which we denote \( \phi_i \) in the above theory. These AO's (Atomic Orbitals) mix in a linear fashion to form molecular orbitals (LCAO-MO approximation).
-<li> Consider the case where all atoms contributing to the conjugated \( \pi \) system are of same type (for example, carbon). The hamiltonian integrals \( H_{ij} =0  \) when atom \(i\) and atom \(j\) are not same or not neighbours. When atoms \(i\) and \(j\) are neighbours, \(H_{ij} = \beta\). And  \(H_{ii} = \alpha\)
-<li> The overlap integrals  \( S_{ij}=0 \) when atom \(i\) and atom \(j\) are not the same and obviously \(S_{ii} =1\). That is, \( {\bf S} = {\bf 1}\). 
-<li> As demonstration, for a linear chain,  we see the the equation for the roots secular determinant is simplified to \( {\bf det} \left( {\bf H} - E {\bf S} \right) = 0\):
+</li><li>So essentially, each atom in the conjugated system contributes one \(\pi\) orbital, which we denote \( \phi_i \) in the above theory. These AO's (Atomic Orbitals) mix in a linear fashion to form molecular orbitals (LCAO-MO approximation).
+</li><li> Consider the case where all atoms contributing to the conjugated \( \pi \) system are of same type (for example, carbon). The hamiltonian integrals \( H_{ij} =0  \) when atom \(i\) and atom \(j\) are not same or not neighbours. When atoms \(i\) and \(j\) are neighbours, \(H_{ij} = \beta\). And  \(H_{ii} = \alpha\)
+</li><li> The overlap integrals  \( S_{ij}=0 \) when atom \(i\) and atom \(j\) are not the same and obviously \(S_{ii} =1\). That is, \( {\bf S} = {\bf 1}\). 
+</li><li> As demonstration, for a linear chain,  we see the the equation for the roots secular determinant is simplified to \( {\bf det} \left( {\bf H} - E {\bf S} \right) = 0\):
 $$ 
 \begin{vmatrix} 
-H_{11} - E S_{11}  & H_{12} - E S_{12} & \cdots & H_{1N} - E S_{1N} \\
-H_{21} - E S_{21}  & H_{22} - E S_{12} & \cdots & H_{2N} - E S_{2N}\\
-.       &  .     &  \cdots & . \\
-.       &  .     &  \cdots & . \\
-H_{N1} - E S_{N1} & H_{N2} - E S_{N2}& \cdots & H_{2N - E S_{NN}} \\  
+H_{11} - E S_{11}  &amp; H_{12} - E S_{12} &amp; \cdots &amp; H_{1N} - E S_{1N} \\
+H_{21} - E S_{21}  &amp; H_{22} - E S_{12} &amp; \cdots &amp; H_{2N} - E S_{2N}\\
+.       &amp;  .     &amp;  \cdots &amp; . \\
+.       &amp;  .     &amp;  \cdots &amp; . \\
+H_{N1} - E S_{N1} &amp; H_{N2} - E S_{N2}&amp; \cdots &amp; H_{2N - E S_{NN}} \\  
 \end{vmatrix}
 
 
 =
 \begin{vmatrix}
-\alpha - E & \beta      & 0     & 0 & \cdots &  0  \\
-\beta      & \alpha - E & \beta & 0 & \cdots & 0 \\
-.          &   .        & .     & . & .      & .  \\
-0          &   0        &  \cdots &\beta      & \alpha - E & \beta  \\
-0          &    0       &    \cdots  & 0 &  \beta & \alpha - E \\
+\alpha - E &amp; \beta      &amp; 0     &amp; 0 &amp; \cdots &amp;  0  \\
+\beta      &amp; \alpha - E &amp; \beta &amp; 0 &amp; \cdots &amp; 0 \\
+.          &amp;   .        &amp; .     &amp; . &amp; .      &amp; .  \\
+0          &amp;   0        &amp;  \cdots &amp;\beta      &amp; \alpha - E &amp; \beta  \\
+0          &amp;    0       &amp;    \cdots  &amp; 0 &amp;  \beta &amp; \alpha - E \\
 \end{vmatrix} = 0
 $$
 which upon solving will give \( N \) roots for \(E\), say \( E_j\), where  \(j = 1,2,\cdots,N\). Each such root will satisfy \(\left( {\bf H} - E_j {\bf 1}\right) \vec c_j = 0\). For each root \(E_j\), there exists a vector of coffecients \(\vec c_j\), which means that the molecular orbital for that energy is given by \( \psi_j = \vec c_j \cdot (\phi_1, \phi_2, \cdots,\phi_n)\) 
-<li> Note that the above matrix has only two non-zero entries: \( \alpha-E\) and \(\beta\). Divivding by \(\beta\) on both sides and setting \( x = (\alpha-E)/\beta\) we see that the resulting determinant will have only two non-zero entries \(x\) and 1. This is is the terminology used in the experiment. (PLEASE NOTE THIS)</li>
+</li><li> Note that the above matrix has only two non-zero entries: \( \alpha-E\) and \(\beta\). Divivding by \(\beta\) on both sides and setting \( x = (\alpha-E)/\beta\) we see that the resulting determinant will have only two non-zero entries \(x\) and 1. This is is the terminology used in the experiment. (PLEASE NOTE THIS)</li>
 <li> Hence, the equations need the solution to eigensystem. The eigenvector gives us the required coeffecients \(\vec c\)  of MO \(\psi_j\) having the energy given by the corresponding eigenvalue \(E_j\).
-</ul>
-</p>
+</li></ul>
+<p></p>
         </div>
       </section>
 
 
       <section id="experiment-article-section-3">
         
-        <div id="experiment-article-section-3-icon" 
-        class="icon">
+        <div id="experiment-article-section-3-icon" class="icon">
 	  <!-- Enclose the icon image of your lab. -->
-	  <img src="../images/objective.jpg" />
+	  <img src="../images/objective.jpg">
 	</div>
      
-        <div id="experiment-article-section-3-heading" 
-        class="heading">
+        <div id="experiment-article-section-3-heading" class="heading">
           Objective
         </div>
 
-        <div id="experiment-article-section-3-content" 
-        class="content">
+        <div id="experiment-article-section-3-content" class="content">
           <p>
             To setup a HMO calculation on \(\pi\)-conjucated  systems and analyze the results
    	</p>
@@ -252,19 +237,16 @@ which upon solving will give \( N \) roots for \(E\), say \( E_j\), where  \(j =
 
       <section id="experiment-article-section-4">
 
-        <div id="experiment-article-section-4-icon" 
-        class="icon">
+        <div id="experiment-article-section-4-icon" class="icon">
 	  <!-- Enclose the icon image of your lab.-->
-	  <img src="../images/simulation.jpg" />
+	  <img src="../images/simulation.jpg">
 	</div>
 
-        <div id="experiment-article-section-4-heading" 
-        class="heading">
+        <div id="experiment-article-section-4-heading" class="heading">
           Experiment
         </div>
 
-        <div id="experiment-article-section-4-content" 
-        class="content">
+        <div id="experiment-article-section-4-content" class="content">
           <p> <a href="experiment/index.php" target="_blank">Start the  Experiment  </a>
           </p>
         </div>
@@ -273,28 +255,25 @@ which upon solving will give \( N \) roots for \(E\), say \( E_j\), where  \(j =
 
       <section id="experiment-article-section-5">
    
-        <div id="experiment-article-section-5-icon" 
-        class="icon">
+        <div id="experiment-article-section-5-icon" class="icon">
 	  <!-- Enclose the icon image of your lab.-->
-	  <img src="../images/manual.jpg" />
+	  <img src="../images/manual.jpg">
 	</div>
 
-        <div id="experiment-article-section-5-heading" 
-        class="heading">
+        <div id="experiment-article-section-5-heading" class="heading">
           Manual
         </div>
 
-        <div id="experiment-article-section-5-content" 
-        class="content">
+        <div id="experiment-article-section-5-content" class="content">
           <p> 
            
-   <ol>
+   </p><ol>
      <li> Select one of the molecules from the list  </li>
      <li>  Using the numbering scheme given for conjugated C atoms, fill in the elements of secular matrix  \( {\bf M}\), where \({\bf M} = {\bf H } - E {\bf S}\), which need to be solved for \( {\bf M} \vec c = 0\)</li>
      <li> The HMO solutions are displayed. Explore the orbitals. 
-   </ol>
+   </li></ol>
 
-          </p> 
+          <p></p> 
 
           </div>
 
@@ -302,19 +281,16 @@ which upon solving will give \( N \) roots for \(E\), say \( E_j\), where  \(j =
 
         <section id="experiment-article-section-6">
       
-          <div id="experiment-article-section-6-icon" 
-          class="icon">
+          <div id="experiment-article-section-6-icon" class="icon">
 	    <!-- Enclose the icon image of your lab.-->
-	    <img src="../images/quizzes.jpg" />
+	    <img src="../images/quizzes.jpg">
 	  </div>
 
-          <div id="experiment-article-section-6-heading" 
-          class="heading">
+          <div id="experiment-article-section-6-heading" class="heading">
             Quizzes
           </div>
 
-          <div id="experiment-article-section-6-content" 
-          class="content">
+          <div id="experiment-article-section-6-content" class="content">
             
            <form name="qz" onsubmit="return checkAns(this);">   `
 <p> <b>Q1.</b> How many orbitals per conjugated atom contribute to Huckel Molecular Orbital?<br>
@@ -328,7 +304,7 @@ which upon solving will give \( N \) roots for \(E\), say \( E_j\), where  \(j =
 \( \frac{1}{2} \) </font> <br>
 <br>
 
-<p> <b>Q2.</b>For a molecule with \(N\) conjugated carbon atoms, how many HMO's are formed ?<br>
+</p><p> <b>Q2.</b>For a molecule with \(N\) conjugated carbon atoms, how many HMO's are formed ?<br>
 <input name="q2" id="q2" value="3" type="radio"> <font color="black">
 \( \frac{N}{2} \)</font> <br>
 <input name="q2" id="q2" value="2" type="radio"><font color="black">
@@ -339,7 +315,7 @@ which upon solving will give \( N \) roots for \(E\), say \( E_j\), where  \(j =
 \( N^2 \) </font> <br>
 <br>
     
-<p> <b>Q3.</b>Species \(C_4 H_4^{2-}\) is aromatic; while species \(C_4 H_4\) is non-aromatic. Also species \(C_6 H_6\) is aromatic. Look at the HMO energy level diagram in the lab, and describe the common feature that could explain aromaticity<br>
+</p><p> <b>Q3.</b>Species \(C_4 H_4^{2-}\) is aromatic; while species \(C_4 H_4\) is non-aromatic. Also species \(C_6 H_6\) is aromatic. Look at the HMO energy level diagram in the lab, and describe the common feature that could explain aromaticity<br>
 <input name="q3" id="q3" value="3" type="radio"> <font color="black">
 Each HMO is completely filled</font> <br>
 <input name="q3" id="q3" value="2" type="radio"><font color="black">
@@ -350,7 +326,7 @@ The gap between HOMO and LUMO is small </font> <br>
 All HMO's have atleast one electron </font> <br>
 <br>
 
-<p> <b>Q4.</b>
+</p><p> <b>Q4.</b>
 During the lab, HMO of the species \(C_4 H_4\) were found. Which of the following related species is aromatic ?<br>
 <input name="q4" id="q4" value="3" type="radio"> <font color="black">
 \(C_4 H_4 ^{-}\) </font> <br>
@@ -393,24 +369,21 @@ During the lab, HMO of the species \(C_4 H_4\) were found. Which of the followin
 		
         <section id="experiment-article-section-8">
    
-          <div id="experiment-article-section-8-icon" 
-          class="icon">
+          <div id="experiment-article-section-8-icon" class="icon">
 	    <!-- Enclose the icon image of your lab.-->
-	    <img src="../images/readings.jpg" />
+	    <img src="../images/readings.jpg">
 	  </div>
 
-          <div id="experiment-article-section-8-heading" 
-          class="heading">
+          <div id="experiment-article-section-8-heading" class="heading">
             Further Readings
           </div>
 
-          <div id="experiment-article-section-8-content" 
-          class="content">
+          <div id="experiment-article-section-8-content" class="content">
            
    <ol> 
       <li> Wikipedia Article: <a href="http://en.wikipedia.org/wiki/H%C3%BCckel_method" target="_blank">http://en.wikipedia.org/wiki/H%C3%BCckel_method" </a></li>
-      <li> "Physical Chemistry" by Atkins and de Paula, 8th Edition: <br> See "Section 11: Molecular Structure". In particluar the subsections "11.1 : Molecular orbital theory" and <br/>  "11.6 : The Huckel approximation"form the basis for this Virtual Lab Experiment.  
-   </ol>
+      <li> "Physical Chemistry" by Atkins and de Paula, 8th Edition: <br> See "Section 11: Molecular Structure". In particluar the subsections "11.1 : Molecular orbital theory" and <br>  "11.6 : The Huckel approximation"form the basis for this Virtual Lab Experiment.  
+   </li></ol>
           </div>
 
         </section>
@@ -418,7 +391,7 @@ During the lab, HMO of the species \(C_4 H_4\) were found. Which of the followin
        
        <div id="lab-article-section-6-icon" class="icon">
          <!-- Enclose the icon image for the section. -->
- <img src="../images/manual.jpg" />
+ <img src="../images/manual.jpg">
 </div>
 
 <!-- The heading for the section can be enclosed in a div tag and shown with a <h2> tag -->
@@ -430,11 +403,11 @@ Feedback
 <!-- Write the section content inside a paragraph element, You can also include images with <img> tag -->
 <div id="lab-article-section-6-content" class="content">
  <p>
-  <ul>
-<li><a href="http://feedback.vlabs.ac.in/feedback/experiment" >Feedback </a></li>
+  </p><ul>
+<li><a href="http://feedback.vlabs.ac.in/feedback/experiment">Feedback </a></li>
 
   </ul>
- </p>
+ <p></p>
 </div>
 
      </section>
@@ -452,9 +425,47 @@ Feedback
 
     <!-- Article footer can display related content and 
     additional links -->						
-    <footer id="lab-article-footer" class="default">
-      <!-- Put the content that you want to appear here -->
-    </footer>
+    <footer id="footer" class="default"><div class="footer-top" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <h4>Community Links</h4>
+        <p>
+	  <a href="http://www.sakshat.ac.in/">Sakshat Portal</a>
+	</p>
+        <p>
+	  <a href="http://outreach.vlabs.ac.in/">Outreach Portal</a>
+	</p>
+        <p>
+	  <a href="http://vlab.co.in/faq">FAQ : Virtual Labs</a>
+	</p>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <h4>Contact Us</h4>
+	<p> <strong>Phone:</strong> General Information : 011-26582050 </p>
+	<p> <strong>Email:</strong> support@vlab.co.in </p>
+      </div>
+      <div class="col-lg-4 col-md-6">
+	<h4>Follow Us</h4>
+	<div class="social-links">
+	  <a style="background: #55acee;" href="https://twitter.com/TheVirtualLabs" class="twitter">
+	    <i class="fa fa-twitter"></i>
+	  </a>
+	  <a style="background: #3b5998;" href="https://www.facebook.com/Virtual-Labs-IIT-Delhi-301510159983871/" class="facebook">
+	    <i class="fa fa-facebook"></i>
+	  </a>
+	  <a style="background: #e52d27;" href="https://www.youtube.com/watch?v=asxRaOgk6a0" class="google-plus">
+	    <i class="fa fa-youtube"></i>
+	  </a>
+	  <a style="background: #2867B2;" href="https://in.linkedin.com/in/virtual-labs-008ba9136" class="linkedin">
+	    <i class="fa fa-linkedin"></i>
+	  </a>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>
+</footer>
 
   </article>
 
@@ -463,9 +474,10 @@ Feedback
   footer-->
  <footer id="lab-footer" class="footer">
    <!-- Put the content here-->
-<a href="http://virtual-labs.ac.in/nmeict/" >Sponsered by MHRD (NME-ICT) </a> | <a href="http://virtual-labs.ac.in/licensing/" target="_blank"> Licensing Terms </a>
+<a href="http://virtual-labs.ac.in/nmeict/">Sponsered by MHRD (NME-ICT) </a> | <a href="http://virtual-labs.ac.in/licensing/" target="_blank"> Licensing Terms </a>
 </footer>
 </div>		
 
-</body>
-</html>
+
+
+</body></html>
