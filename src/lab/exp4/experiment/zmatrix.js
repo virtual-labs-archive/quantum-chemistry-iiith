@@ -1,4 +1,21 @@
-<?php include('config.php'); ?>
+<script language="JavaScript">
+
+var nl = getNewLine()
+
+function getNewLine() {
+	var agent = navigator.userAgent
+
+	if (agent.indexOf("Win") >= 0)
+		return "\r\n"
+	else
+		if (agent.indexOf("Mac") >= 0)
+			return "\r"
+
+ 	return "\r"
+
+}
+
+pagecode = '<?php include(\'config.php\'); ?>
 <?php
 session_start();
 $check=0;
@@ -27,32 +44,29 @@ $check=0;
 		
 		header("Location: gamesinput.php");
 	}
-
-
 	$file_index=0;
-	$_SESSION['file_names']=$file_names;
-	$_SESSION['file_index']=$file_index;
-	$_SESSION['zmat_line']=0;
-	$_SESSION['name']=$name;
+	$_SESSION[\'file_names\']=$file_names;
+	$_SESSION[\'file_index\']=$file_index;
+	$_SESSION[\'zmat_line\']=0;
+	$_SESSION[\'name\']=$name;
 	$check=1;
 	
 }
-if($_POST['render'])
+if($_POST[\'render\'])
 {
 	$correct_selection =0 ;	
-	$file_index = $_SESSION['file_index'];
+	$file_index = $_SESSION[\'file_index\'];
 	$check=1;
 	
-	$file_names=  $_SESSION['file_names'];
-	$name = $_SESSION['name'];
-
+	$file_names=  $_SESSION[\'file_names\'];
+	$name = $_SESSION[\'name\'];
 	include("check.php");
 	//echo $correct_selection;
 	if($correct_selection==1)
-		$_SESSION['file_index'] = $_SESSION['file_index']+1;
+		$_SESSION[\'file_index\'] = $_SESSION[\'file_index\']+1;
 		
-	$name = $_SESSION['name'];
-	$file_index = $_SESSION['file_index'];
+	$name = $_SESSION[\'name\'];
+	$file_index = $_SESSION[\'file_index\'];
 	
 	
 	
@@ -90,25 +104,25 @@ if($check==1)
 	}
 	
 </style>
-<script src="<?php echo($jmol_path);?>/Jmol.js"></script>
-<script type="text/javascript" src="loadXMLDoc.js"></script>
+<scr'+'ipt src="<?php echo($jmol_path);?>/Jmol.js"></scr'+'ipt>
+<scr'+'ipt type="text/javascript" src="loadXMLDoc.js"></scr'+'ipt>
 </head>
 
 <body>
 
-	<script>
-		loadXMLDoc('header_1.html','top_part');
-		loadXMLDoc('bottom.html','bottom');
-	</script>
+	<scr'+'ipt>
+		loadXMLDoc(\'header_1.html\',\'top_part\');
+		loadXMLDoc(\'bottom.html\',\'bottom\');
+	</scr'+'ipt>
 	<div id="container" ><!--container starts-->
 		<div id="top_part">
 	
 		</div><!-- top_part -->
 		<div id="content"><!--content starts-->
-			<script>
+			<scr'+'ipt>
 				      jmolInitialize("<?php echo($jmol_path);?>");
 				      jmolCheckBrowser("popup", "<?php echo($browser_chk);?>", "onClick");
-			</script>
+			</scr'+'ipt>
 			<div style="padding-left:70px;padding-top:80px;">
 				<a name="calc"></a>
 			      <table border="0">
@@ -126,18 +140,18 @@ if($check==1)
 					<td>
 					    <?php $jmol_file = $file_base."/".$name."/".$file_names[$file_index]; ?>
 			
-					    <script>
+					    <scr'+'ipt>
 					      var script =
 					      "load <?php echo $jmol_file ; ?>; wireframe .1; cpk off; spacefill 20%;" +
 					      "frame 3; vectors on; color vectors yellow;" +
 					      "move 10 -20 10 0 0 0 0 0 1; delay 1; vibration on;";
 					      jmolApplet(330, script);
-					    </script>
+					    </scr'+'ipt>
 					  </td>
 					  <td width="30px"></td>
 
 					  <td> 
-						  <script>
+						  <scr'+'ipt>
 							      jmolRadio("spacefill 20%", "spacefill 20% <br />", "checked");
 							      jmolRadio("spacefill 25%", "spacefill 25% <br />");
 							      jmolRadio("spacefill 50%", "spacefill 50% <br />");
@@ -151,7 +165,7 @@ if($check==1)
 							      jmolBr();
 							      jmolBr();
 							      jmolCheckbox("spin on", "spin off", "spin");
-                                                  </script>
+                                                  </scr'+'ipt>
 					 </td>
 		
 				</tr>
@@ -163,7 +177,7 @@ if($check==1)
 		<center>
 		<div id="zmatrix" >
 			  <div id="heading">
-					   <div id="z-mat" style='color:black;font-family:"Times New Roman", Times, serif;font-size:1.5em;'>
+					   <div id="z-mat" style=\'color:black;font-family:"Times New Roman", Times, serif;font-size:1.5em;\'>
 					    <h3> Z-matrix calculation </h3>
 					   </div>
 			  </div>	
@@ -249,4 +263,8 @@ if($check==1)
 
 </body>
 <?php } ?>
-</html>
+</html>'
+
+document.write(pagecode);
+
+</script>
