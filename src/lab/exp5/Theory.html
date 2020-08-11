@@ -21,6 +21,10 @@
 
     <!-- Custom CSS -->
     <link href="../css/style.css" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async 		
+    		src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
 	<script type="text/javascript" src="tabs.js"></script>
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-67020197-1', 'auto');ga('send', 'pageview');</script>	
 </head>
@@ -86,7 +90,9 @@
 			
 			<!-- =================================================================================================================================== -->
 			<div class="container-fluid" style="margin-left: 35px; margin-right: 35px;">
-				<h2 class="text-h2-lightblue" style=" margin-bottom: 20px; margin-top: 10px; "><a href="http://vlab.co.in/broad-area-civil-engineering" class="sidebar-a">Civil Engineering</a> <i aria-hidden="true" class="fa fa-angle-right" style="font-size: 30px; padding-right: 4px;"></i><a href="../Introduction.html" class="sidebar-a">Physics Lab</a><i aria-hidden="true" class="fa fa-angle-right" style="font-size: 30px; padding-right: 4px;"></i><a href="../List of experiments.html" class="sidebar-a">List Of Experiments</a><br></h2>
+
+				<h2 class="text-h2-lightblue" style=" margin-bottom: 20px; margin-top: 10px; "><a href="http://vlab.co.in/broad-area-civil-engineering" class="sidebar-a">Civil Engineering</a> <i aria-hidden="true" class="fa fa-angle-right" style="font-size: 30px; padding-right: 4px;"></i><a href="../Introduction.html" class="sidebar-a">Quantum Chemistry</a><i aria-hidden="true" class="fa fa-angle-right" style="font-size: 30px; padding-right: 4px;"></i><a href="../List of experiments.html" class="sidebar-a">List Of Experiments</a><br></h2>
+
 					
 					<div class="row">
 						<div class="col-md-2 sidebar-col-2"><a href="Introduction.html?domain=Chemical Engineering&amp;lab=Quantum Chemistry Lab" class="sidebar-a"> <h3 class="text-h3-darkblue" style="margin-top: 2px;"> Introduction </h3> </a><a href="Theory.html?domain=Chemical Engineering&amp;lab=Quantum Chemistry Lab" class="sidebar-a"> <h3 class="text-h3-darkblue" style="margin-top: 2px; color: #ff6600 !important;"> Theory </h3> </a><a href="Objective.html?domain=Chemical Engineering&amp;lab=Quantum Chemistry Lab" class="sidebar-a"> <h3 class="text-h3-darkblue" style="margin-top: 2px;"> Objective </h3> </a><a href="Manual.html?domain=Chemical Engineering&amp;lab=Quantum Chemistry Lab" class="sidebar-a"> <h3 class="text-h3-darkblue" style="margin-top: 2px;"> Manual </h3> </a><a href="Experiment.html?domain=Chemical Engineering&amp;lab=Quantum Chemistry Lab" class="sidebar-a"> <h3 class="text-h3-darkblue" style="margin-top: 2px;"> Experiment </h3> </a><a href="Quizzes.html?domain=Chemical Engineering&amp;lab=Quantum Chemistry Lab" class="sidebar-a"> <h3 class="text-h3-darkblue" style="margin-top: 2px;"> Quizzes </h3> </a><a href="Further Readings.html?domain=Chemical Engineering&amp;lab=Quantum Chemistry Lab" class="sidebar-a"> <h3 class="text-h3-darkblue" style="margin-top: 2px;"> Further Readings </h3> </a><a class="sidebar-a" href="Feedback.html?domain=Computer Science"> <h3 class="text-h3-darkblue" style="margin-top: 2px;">Feedback</h3></a></div>
@@ -94,30 +100,103 @@
 						<div class="col-md-10 lab-list-col-10">
 							
 							<!--edit -->
-<h1 class="text-h1-lightblue">Simple Pendulum</h1><div class="content" id="experiment-article-section-2-content">
-<p>
-          There are two solutions to \(ax^2 + bx + c = 0\) and 
-          they are $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$ 
-          </p>
-<p>
-          By applying <span class="term">Newton's second law</span> for 
-          rotational systems, the equation of motion for the 
-          pendulum may be obtained.
-          </p>
-<p>
-          Here \(\tau\)  =  <span class="term">Torque </span>;   I  =  
-          <span class="term">Moment of Inertia</span>;
-          α = <span class="term"> Angular
-          Velocity</span>. m is mass of the oscillator, l is
-          the length of the oscillator and \(\theta\) is initial
-          displacement. 
-          </p>
-<p>							
-          If the amplitude of the angular displacement is 
-          small then we can use the approximation 
-          $$ sin \theta \approx \theta $$
+<h1 class="text-h1-lightblue">Calculation of Vibrational Frequency of Molecules and Visualization of Normal Modes</h1><div class="content" id="experiment-article-section-2-content">
+ <p>
 
-          </p>
+Ab initio quantum chemistry involves a choice of method and a choice of basis set. A number of different procedures are also available, such as single point calculations, geometry optimizations and calculations of frequencies.
+</p>
+
+<p>Methods, basis sets and procedures play a key role in the calculations.</p>
+
+<p>Methods  include the abinitio methods, Hartee-Fock method and the electron correlation methods. The electron correlation methods can be classified as variational methods, perturbation methods and the density functional methods.</p>
+
+<p>Variational correlation methods:</p>
+
+<p>The variational principle states that the expectation value or the average value of an energy for an approximate wave function always lies above or equal to the exact solution of the schrodinger equation for the same Hamiltonian operator. This means that if we have a wave function that contains adjustable parameters and we adjust these parameters to minimise the expectation value of the energy, then we approach the exact result.</p>
+
+<p>The principle post-Hartree-Fock method that uses the variation principle is configuration interaction. Here we take a linear combination of components, each of which represents an excited configuration wave function and mix these with the Hartree-Fock (HF) wave function. Each component has the electrons occupying the various occupied and virtual orbitals of the Hartree-Fock wave function in different ways. It is common to restrict the excited configurations to those which arise from promoting two electrons from the occupied orbitals of the HF wave function to the virtual orbitals (Configuration Interaction with double excitations - CID) or to single and double excitations (Configuration Interaction with single and double excitations - CISD). If we take all possible excitations of the electrons from the HF occupied orbitals to the virtual orbitals, the method is called "Full CI", but this is very time consuming and only possible for very small systems. Other approaches aim!
+  to optimise not only the mixing coefficients of the various configurations, but also the coefficients of the basis functions in the molecular orbitals. The latter are frozen at the HF values in the CI methods described above. This more complex approach is called multi-configuration self-consistent field (MCSCF). It can give quite good results with a modest number of configurations. The CASSCF - Complete Active Space Self-Consistent Field - method is an example of this approach. MCSCF methods, however, are beyond the scope of this module.
+</p>
+<p>
+</p><h3>Single point energy calculations</h3>
+<p></p>
+<p>
+This procedure calculates the energy, wave function and the other requested properties for a single fixed geometry. It is usually done to study a new molecule in order to check the nature of the wave function. It is also frequently carried out after the geometry optimization, but with a larger basis set or a more superior method than those used to optimise the geometry.
+</p>
+<h3>Frequency calculations</h3>
+<p>
+The frequency calculations can be carried out for two main reasons. First one is to predict the frequencies and the IR and Raman intensities. Frequencies which are calculated are harmonic frequencies as they are obtained by assuming the potential energy surface to be harmonic. After running an optimization calculation, if all the calculated frequencies are real and positive then that contributes to the local or global minimum of the molecule taken. If we have a stationary point other than the minimum then we don't get all positive values but there would be negative numbers which are often called as "imaginary frequencies". A transition state for any molecule would have only one imaginary frequency. If the symmetry of the molecule is restrained it gives more than one imaginary frequency during optimization. For a molecule of n atoms, the number of normal modes is (3n-6) if the molecule taken is nonlinear and it is (3n-5) if the molecule is linear.
+</p>
+<br>
+<h2>GAMESS</h2>
+<p>
+The software used for all calculations is GAMESS. The input file description is as follows:<br>
+
+<br>
+Input file:<br><br>
+</p>
+<ol>
+<li>$CONTRL: This group has several subsections which speak about various global switches.</li><br>
+<ol><li>SCFTYP: together  with MPLEVEL or CTYP specifies the wavefunction. The user has the choice to choose from RHF, UHF, MCSCF and so on.</li><br>
+
+<li>MPLEVEL: chooses Moller-Plesset perturbation theory elvel after the SCF.</li><br>
+
+<li>CITYP: chooses the CI computation after the SCF, any SCFTYP except UHF may be followed by a CI computation.</li><br>
+
+<li>RUNTYP: specifies the type of computation .</li><br>
+
+<li>COORD: choice of the molecular geometry in $DATA.</li><br>
+
+<li>UNIQUE:only forsymmetry unique atoms will be given in Cartesian coordinates which is default.</li><br>
+
+          <li>CART: Cartesian coordinates will be input.</li><br>
+
+          <li>ZMAT: GAUSSIAN style internals will be input.</li><br>
+
+<li>UNITS: distance units can be specified as ANGS or BOHR. Angles must be in degrees.</li><br>
+</ol>
+
+<li>$SYSTEM: This group provides global control information for your computerï¿½s operation. This is system related input, and will not seem particularly chemical to the users.</li><br>
+<ol>
+<li>TIMLIM: time limit, in minutes. It is set to about 95 percent of the time limit given to the batch job so that GAMESS can stop itself gently.</li><br>
+
+<li>MEMORY: establishes the maximum memory which your job can use.</li><br>
+</ol>
+<li>$STATPT: This group controls the search for the stationary points.</li><br>
+<ol>
+
+<li>NSTEP: maximum number of steps to take. Restart data is punched if NSTEP is exceeded.</li><br>
+
+<li>HESS: selects the initial hessian matrix.</li><br>
+<ol>
+<li>GUESS: chooses a positive diagonal hessian</li><br>
+
+<li>READ:causes the hessian to be read from a $HESS group.</li><br>
+
+<li>RDAB: reads only the ab initio part of the hessian, and approximates the effective fragment blocks.</li><br>
+
+<li>CALC: causes hessian to be computed.</li><br>
+</ol>
+</ol>
+<li>$BASIS: This group allows certain standard basis sets to be easily given. If this group is omitted, the basis set must be given instead of $DATA group.</li><br>
+<ol>
+
+<li>GBASIS: Name of the Gaussian basis set.</li><br>
+
+<li>NGAUSS: number of Gaussians(N). This parameter pertains only to GBASIS=STO, N21,N31 and N311.</li><br>
+
+<li>NDFUNC:number of heavy atom polarization functions to be used. These are usually d functions.</li><br>
+</ol>
+<li>$GUESS: This group controls the selection of initial molecular orbitals.</li><br>
+
+<li>$HUCKEL: carry out an extended Huckel calculation using a Huzinaga MINI basis set, and project this onto the current basis. This is implemented for a toms upto Rn, and will work for any electron or ECP basis set.</li><br>
+
+<li>$DATA: This group describes the global molecular data such as point group symmetry, nuclear coordinates, and possibly the basis set. It consists of a series of free format card images.</li><br>
+</ol>
+<p>
+For further details about the input file go to the GAMESS website by clicking <a href="http://www.msg.chem.iastate.edu/gamess/" target="_blank">here</a>
+</p>
+
 </div>						</div>
 					</div>
 			</div>
